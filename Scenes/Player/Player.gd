@@ -42,3 +42,6 @@ func process_input():
 		# Stops the velocity if it gets below min-threshold and not moving
 		velocity.x = 0;
 	return ret_vec;
+	
+func on_banana_slip():
+	print("I have slipped on a banana.");

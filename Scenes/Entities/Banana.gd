@@ -1,9 +1,10 @@
 extends Area2D
 
-
+var player_ref;
 func _ready():
-	pass # Replace with function body.
+	player_ref = get_node("../Player");
 
 
-func _process(delta):
-	pass
+func _on_Banana_body_entered(body):
+	if body.get_name() == "Player":
+		player_ref.on_banana_slip();
