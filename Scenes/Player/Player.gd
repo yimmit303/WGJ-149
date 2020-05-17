@@ -43,5 +43,5 @@ func process_input():
 		velocity.x = 0;
 	return ret_vec;
 	
-func on_banana_slip():
+func on_banana_slip(body):
 	print("I have slipped on a banana.");
