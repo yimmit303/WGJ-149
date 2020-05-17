@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Scenes/Station/Props/PictureJohnSmith.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall_2.png" type="Texture" id=2]
@@ -50,10 +50,35 @@
 [ext_resource path="res://Scenes/Station/Environment/Animated/Door14.png" type="Texture" id=48]
 [ext_resource path="res://Scenes/Station/Environment/Animated/Door11.png" type="Texture" id=49]
 [ext_resource path="res://Scenes/Station/Environment/Animated/Door16.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator3.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator6.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator4.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator2.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator5.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator1.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator9.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator11.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Station/Environment/Elevator.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator14.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator12.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator13.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator7.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator10.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Station/Environment/Animated/Elevator8.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Station/Props/FloorDisplay.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Station/Props/ElevatorButton.png" type="Texture" id=67]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 35 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 47 ), ExtResource( 45 ), ExtResource( 49 ), ExtResource( 46 ), ExtResource( 43 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 56 ), ExtResource( 54 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 52 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 57 ), ExtResource( 64 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 60 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -333,6 +358,14 @@ texture = ExtResource( 5 )
 position = Vector2( 240, -288 )
 texture = ExtResource( 5 )
 
+[node name="Wall20" type="Sprite" parent="."]
+position = Vector2( 272, -288 )
+texture = ExtResource( 5 )
+
+[node name="Wall21" type="Sprite" parent="."]
+position = Vector2( 304, -288 )
+texture = ExtResource( 5 )
+
 [node name="Vent3" type="Sprite" parent="."]
 position = Vector2( 16, -176 )
 texture = ExtResource( 11 )
@@ -440,6 +473,18 @@ texture = ExtResource( 4 )
 
 [node name="Floor_Carpet16" type="Sprite" parent="."]
 position = Vector2( 240, -240 )
+texture = ExtResource( 4 )
+
+[node name="Floor_Carpet19" type="Sprite" parent="."]
+position = Vector2( 304, -240 )
+texture = ExtResource( 4 )
+
+[node name="Floor_Carpet17" type="Sprite" parent="."]
+position = Vector2( 272, -240 )
+texture = ExtResource( 4 )
+
+[node name="Floor_Carpet18" type="Sprite" parent="."]
+position = Vector2( 272, -240 )
 texture = ExtResource( 4 )
 
 [node name="BulletinBoard" type="Sprite" parent="."]
@@ -570,6 +615,10 @@ texture = ExtResource( 34 )
 position = Vector2( 224, -272 )
 texture = ExtResource( 34 )
 
+[node name="Wall_Divider4" type="Sprite" parent="."]
+position = Vector2( 312, -272 )
+texture = ExtResource( 34 )
+
 [node name="Wall_Divider3" type="Sprite" parent="."]
 position = Vector2( 224, -352 )
 texture = ExtResource( 34 )
@@ -577,5 +626,34 @@ texture = ExtResource( 34 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 232, -256 )
 frames = SubResource( 1 )
-frame = 6
+frame = 8
+speed_scale = 3.0
 playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 304, -256 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 1 )
+frame = 7
+speed_scale = 3.0
+playing = true
+
+[node name="Elevator" type="Sprite" parent="."]
+position = Vector2( 272, -256 )
+texture = ExtResource( 59 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 272, -256 )
+frames = SubResource( 2 )
+frame = 10
+speed_scale = 2.0
+playing = true
+
+[node name="FloorDisplay" type="Sprite" parent="."]
+position = Vector2( 272, -288 )
+texture = ExtResource( 66 )
+
+[node name="ElevatorButton" type="Sprite" parent="."]
+position = Vector2( 252, -267 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 67 )
