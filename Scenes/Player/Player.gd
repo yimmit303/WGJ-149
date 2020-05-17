@@ -45,3 +45,6 @@ func process_input():
 	
 func on_banana_slip(body):
 	print("I have slipped on a banana.");
+
+func on_anvil_hit(body):
+	print("oof, anvil hit me.");
