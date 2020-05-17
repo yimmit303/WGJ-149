@@ -1,11 +1,18 @@
 extends Label
 
+signal time_out
 
 var timer_time = 5 * 60
 
 func _process(delta):
 	timer_time -= delta
+	if timer_time <= 0:
+		timer_time = 0
+		self.text = "0:00"
+		emit_signal("time_out")
+		return
 	format_and_set(timer_time)
+
 
 func format_and_set(time):
 	var str_time = str(time/60)
@@ -15,4 +22,7 @@ func format_and_set(time):
 	var seconds = float(str_time) - minutes
 	seconds = seconds * 60
 	seconds = round(seconds)
-	self.text = str(minutes) + ":" + str(seconds)
+	var sec_str = str(seconds)
+	if len(sec_str) == 1:
+		sec_str = "0" + sec_str
+	self.text = str(minutes) + ":" + sec_str
