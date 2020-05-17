@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="WGJ-149"
+run/main_scene="res://Scenes/Root/Root.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -26,28 +27,30 @@ window/size/resizable=false
 window/size/borderless=true
 window/size/fullscreen=true
 
-[importer_defaults]
+[input]
 
-texture={
-"compress/bptc_ldr": 0,
-"compress/hdr_mode": 0,
-"compress/lossy_quality": 0.7,
-"compress/mode": 0,
-"compress/normal_map": 0,
-"detect_3d": true,
-"flags/anisotropic": false,
-"flags/filter": false,
-"flags/mipmaps": false,
-"flags/repeat": 0,
-"flags/srgb": 2,
-"process/HDR_as_SRGB": false,
-"process/fix_alpha_border": true,
-"process/invert_color": false,
-"process/premult_alpha": false,
-"size_limit": 0,
-"stream": false,
-"svg/scale": 1.0
+move_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
 }
+move_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_render/layer_1="player"
+2d_render/layer_2="npc"
+2d_render/layer_3="entities"
+2d_render/layer_4="obstacles"
 
 [rendering]
 
