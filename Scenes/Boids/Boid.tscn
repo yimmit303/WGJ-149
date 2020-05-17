@@ -16,4 +16,7 @@ collide_with_areas = true
 collide_with_bodies = false
 
 [node name="TestingRay" type="RayCast2D" parent="."]
+enabled = true
 cast_to = Vector2( 0, -50 )
+collide_with_areas = true
+collide_with_bodies = false
