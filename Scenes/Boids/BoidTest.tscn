@@ -4,10 +4,10 @@
 [ext_resource path="res://Scenes/Boids/Boid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Boids/BoidTest.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.7638, 978.944 )
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 94.1795
 
 [node name="BoidTest" type="Node2D"]
@@ -21,14 +21,14 @@ position = Vector2( -30.7399, 461.67 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
 position = Vector2( -37.763, 80.5611 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Wall2" type="Area2D" parent="."]
 position = Vector2( 2023.57, 474.258 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
 position = Vector2( -37.763, 80.5611 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Wall3" type="Area2D" parent="."]
 position = Vector2( 1089.79, 1300.68 )
@@ -36,11 +36,11 @@ rotation = 1.57001
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
 position = Vector2( -158.336, 117.556 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall3"]
 position = Vector2( -1366.04, 141.839 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Collider1" type="Area2D" parent="."]
 position = Vector2( 1112.22, 542.231 )
@@ -50,7 +50,7 @@ scale = Vector2( 1.38412, 1.38412 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider1"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Collider2" type="Area2D" parent="."]
 position = Vector2( 569.99, 451.551 )
@@ -61,7 +61,7 @@ scale = Vector2( 1.38412, 1.38412 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider2"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Collider3" type="Area2D" parent="."]
 position = Vector2( 660.671, 810.571 )
@@ -72,11 +72,11 @@ scale = Vector2( 1.38412, 1.38412 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collider3"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 current = true
 
 [node name="Boid" parent="." instance=ExtResource( 2 )]
-position = Vector2( 574.753, 631.535 )
+position = Vector2( 550.311, 628.043 )

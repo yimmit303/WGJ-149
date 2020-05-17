@@ -16,27 +16,30 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $CollisionRay.get_collider() != null:
-		print("colliding!!!")
+
+	if $CollisionRay.is_colliding():
 		self.target_angle = get_new_angle()
-		rotate_self(cur_angle - target_angle)
+		rotate_self(target_angle - cur_angle)
 	self.translate(forward * speed * delta)
 
 func rotate_self(deg):
 	forward = forward.rotated(deg2rad(deg))
-	print(forward * 50)
-	$CollisionRay.cast_to = forward * 2
-	$TestingRay.cast_to = $CollisionRay.cast_to
+	$CollisionRay.cast_to = Vector2(forward.x, -forward.y) * -50
+#	$CollisionRay.cast_to = $CollisionRay.cast_to.rotated(deg2rad(deg))
+	$TestingRay.cast_to = Vector2(-forward.x, forward.y) * 50
+	$CollisionRay.force_raycast_update()
+	$TestingRay.force_raycast_update()
+	
 	self.rotation_degrees += deg
 	self.cur_angle += deg
-	self.cur_angle % 360
+	self.cur_angle = fmod(self.cur_angle, 360.0)
 
 func get_new_angle():
 	var direction = 1
 	var test_angle = 1
-	while $TestingRay.get_collider() != null or abs(test_angle) > 90:
-		$TestingRay.cast_to = forward.rotated(deg2rad(test_angle))
+	while $TestingRay.is_colliding() and abs(test_angle) < 90:
+		$TestingRay.cast_to = $TestingRay.cast_to.rotated(test_angle * direction)
+		$TestingRay.force_raycast_update()
 		direction *= -1
 		test_angle *= 1.5
-	print(self.target_angle + test_angle)
-	return self.target_angle + test_angle
+	return self.target_angle + test_angle * direction
