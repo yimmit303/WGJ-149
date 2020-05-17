@@ -9,8 +9,11 @@ script = ExtResource( 2 )
 [node name="BoidSprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="CollisionRay" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, -50 )
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="TestingRay" type="RayCast2D" parent="."]
+cast_to = Vector2( 0, -50 )

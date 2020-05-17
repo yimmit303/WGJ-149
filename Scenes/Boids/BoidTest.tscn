@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Boids/ColliderSprite.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Boids/Boid.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Boids/BoidTest.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 63.7638, 978.944 )
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 94.1795
@@ -12,6 +15,32 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Wall" type="Area2D" parent="."]
+position = Vector2( -30.7399, 461.67 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+position = Vector2( -37.763, 80.5611 )
+shape = SubResource( 2 )
+
+[node name="Wall2" type="Area2D" parent="."]
+position = Vector2( 2023.57, 474.258 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
+position = Vector2( -37.763, 80.5611 )
+shape = SubResource( 2 )
+
+[node name="Wall3" type="Area2D" parent="."]
+position = Vector2( 1089.79, 1300.68 )
+rotation = 1.57001
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3"]
+position = Vector2( -158.336, 117.556 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Wall3"]
+position = Vector2( -1366.04, 141.839 )
+shape = SubResource( 2 )
 
 [node name="Collider1" type="Area2D" parent="."]
 position = Vector2( 1112.22, 542.231 )
@@ -50,4 +79,4 @@ anchor_mode = 0
 current = true
 
 [node name="Boid" parent="." instance=ExtResource( 2 )]
-position = Vector2( 575.814, 582.985 )
+position = Vector2( 574.753, 631.535 )
