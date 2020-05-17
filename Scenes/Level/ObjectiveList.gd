@@ -20,3 +20,6 @@ func _on_Level_camera_finsished():
 		var thread = Thread.new()
 		thread.start(self, "animate_obj", child_list[i])
 		OS.delay_msec(100)
+
+func _player_interacted(object_name, object_details):
+	pass
