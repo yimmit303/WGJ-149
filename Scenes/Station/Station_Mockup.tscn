@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Station/Props/PictureJohnSmith.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Props/PictureHills.png" type="Texture" id=2]
@@ -20,8 +20,24 @@
 [ext_resource path="res://Scenes/Station/Props/Typewriter.png" type="Texture" id=18]
 [ext_resource path="res://Scenes/Station/Props/StackOfPapers.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Station/Props/StackOfFolders.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Station/Environment/HoldingCell_Wall.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Station/Environment/Lock.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Station/Environment/Jail_Bars.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Station/Environment/Cell.png" type="Texture" id=24]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Wall2" type="Sprite" parent="."]
+position = Vector2( 16, -48 )
+texture = ExtResource( 5 )
+
+[node name="Wall3" type="Sprite" parent="."]
+position = Vector2( 112, -48 )
+texture = ExtResource( 5 )
+
+[node name="Wall4" type="Sprite" parent="."]
+position = Vector2( 208, -48 )
+texture = ExtResource( 5 )
 
 [node name="Floor_Carpet" type="Sprite" parent="."]
 position = Vector2( 16, -16 )
@@ -136,3 +152,60 @@ texture = ExtResource( 17 )
 position = Vector2( 136, -16 )
 scale = Vector2( -1, 1 )
 texture = ExtResource( 18 )
+
+[node name="HoldingCell_Wall" type="Sprite" parent="."]
+position = Vector2( 48, -80 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -16 )
+
+[node name="HoldingCell_Wall2" type="Sprite" parent="."]
+position = Vector2( 16, -96 )
+texture = ExtResource( 21 )
+
+[node name="HoldingCell_Wall4" type="Sprite" parent="."]
+position = Vector2( 112, -96 )
+texture = ExtResource( 21 )
+
+[node name="HoldingCell_Wall3" type="Sprite" parent="."]
+position = Vector2( 80, -96 )
+texture = ExtResource( 21 )
+
+[node name="Cell" type="Sprite" parent="."]
+position = Vector2( 64, -90 )
+scale = Vector2( 1, 0.75 )
+texture = ExtResource( 24 )
+offset = Vector2( 0, -8 )
+
+[node name="CopTemplate2" type="Sprite" parent="."]
+position = Vector2( 72, -80 )
+texture = ExtResource( 16 )
+offset = Vector2( 0, -8 )
+
+[node name="Jail_Bars" type="Sprite" parent="."]
+position = Vector2( 40, -106.286 )
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 23 )
+offset = Vector2( 8, 6.85714 )
+
+[node name="Jail_Bars4" type="Sprite" parent="."]
+position = Vector2( 72, -106.286 )
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 23 )
+offset = Vector2( 8, 6.85714 )
+
+[node name="Vent2" type="Sprite" parent="."]
+position = Vector2( 16, -80 )
+texture = ExtResource( 11 )
+
+[node name="CeilingLight2" type="Sprite" parent="."]
+position = Vector2( 16, -112 )
+texture = ExtResource( 9 )
+
+[node name="CeilingLight6" type="Sprite" parent="."]
+position = Vector2( 112, -112 )
+texture = ExtResource( 9 )
+
+[node name="Lock" type="Sprite" parent="."]
+position = Vector2( 48, -80 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -8 )
