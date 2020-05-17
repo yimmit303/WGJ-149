@@ -1,35 +1,37 @@
 extends KinematicBody2D
 var gravity = Vector2(0, 9.81);
 var velocity = Vector2();
-var max_speed = 600.0;
-var friction = 0.09;
-var move_force = 1000;
-var jump_force = 20000;
-
+var sprint_max = 650.0;
+var walk_max = 250.0;
+var cur_max = walk_max;
+var friction = 0.17;
+var move_force = 75;
 
 func _physics_process(delta):
-	velocity += gravity * delta * 100;
-	var dir_vec = process_input(delta);
+	velocity += gravity * 1.6;
+	var dir_vec = process_input();
 	velocity += dir_vec;
 	velocity = move_and_slide(velocity, Vector2.UP);
 
 
-func process_input(delta):
+func process_input():
 	var tmp_vel = velocity;
 	var ret_vec = Vector2();
 	var moved = false;
+	if Input.is_action_pressed("sprint"):
+		cur_max = sprint_max;
+	else:
+		cur_max = walk_max;
 	if Input.is_action_pressed("move_right"):
-		tmp_vel.x += move_force * delta;
-		if tmp_vel.length_squared() < pow(max_speed, 2):
-			velocity.x += move_force * delta;
+		tmp_vel.x += move_force;
+		if tmp_vel.length_squared() < pow(cur_max, 2):
+			velocity.x += move_force;
 			moved = true;
 	if Input.is_action_pressed("move_left"):
-		tmp_vel.x -= move_force * delta;
-		if tmp_vel.length_squared() < pow(max_speed, 2):
-			velocity.x -= move_force * delta;
+		tmp_vel.x -= move_force;
+		if tmp_vel.length_squared() < pow(cur_max, 2):
+			velocity.x -= move_force;
 			moved = true;
-	if Input.is_action_pressed("jump") and is_on_floor():
-		velocity.y -= jump_force * delta;
 	if not moved and is_on_floor():
 		# floor friction, only applies when not accelerating
 		velocity.x *= 1.0 - friction;
