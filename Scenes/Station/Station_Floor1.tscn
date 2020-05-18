@@ -1,0 +1,329 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Scenes/Station/Elevator_Room.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Station/Door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Station/Environment/Floor_Tile.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Station/Environment/Wall_Divider.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Station/Environment/WindowWall_NoBlinds_Tile.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Station/Props/PictureForce.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Station/Props/BulletinBoard.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Station/Props/FilingCabinet.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Station/Props/First.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Station/Props/WaterCooler.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Station/Environment/WindowWall_Blinds_Tile.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Station/Props/PictureJohnSmith.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Station/Environment/Vent.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Station/Environment/Floor_Carpet.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Station/Props/Table.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male1_Sitting.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Station/Props/Phone.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Station/Props/Lamp.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Station/Props/Flag.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Station/Props/PictureHills.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Station/CeilingLight.tscn" type="PackedScene" id=23]
+
+[node name="Station_Floor1" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2( 16, -16 )
+
+[node name="Floor_Tile5" type="Sprite" parent="Background"]
+position = Vector2( 192, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile6" type="Sprite" parent="Background"]
+position = Vector2( 256, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile7" type="Sprite" parent="Background"]
+position = Vector2( 288, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile8" type="Sprite" parent="Background"]
+position = Vector2( 352, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile9" type="Sprite" parent="Background"]
+position = Vector2( 384, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile10" type="Sprite" parent="Background"]
+position = Vector2( 416, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile11" type="Sprite" parent="Background"]
+position = Vector2( 448, 0 )
+texture = ExtResource( 3 )
+
+[node name="Wall" type="Sprite" parent="Background"]
+position = Vector2( 0, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall18" type="Sprite" parent="Background"]
+position = Vector2( 64, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall5" type="Sprite" parent="Background"]
+position = Vector2( 192, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall6" type="Sprite" parent="Background"]
+position = Vector2( 256, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall7" type="Sprite" parent="Background"]
+position = Vector2( 288, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall9" type="Sprite" parent="Background"]
+position = Vector2( 384, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall12" type="Sprite" parent="Background"]
+position = Vector2( 352, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall10" type="Sprite" parent="Background"]
+position = Vector2( 416, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall11" type="Sprite" parent="Background"]
+position = Vector2( 448, -48 )
+texture = ExtResource( 4 )
+
+[node name="WindowWall_NoBlinds_Tile" type="Sprite" parent="Background"]
+position = Vector2( 32, -16 )
+texture = ExtResource( 6 )
+
+[node name="WindowWall_NoBlinds_Tile2" type="Sprite" parent="Background"]
+position = Vector2( 224, -16 )
+texture = ExtResource( 6 )
+
+[node name="Floor_Tile" type="Sprite" parent="Background"]
+texture = ExtResource( 3 )
+
+[node name="Floor_Tile2" type="Sprite" parent="Background"]
+position = Vector2( 64, 0 )
+texture = ExtResource( 3 )
+
+[node name="Floor_Carpet" type="Sprite" parent="Background"]
+position = Vector2( 576, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet2" type="Sprite" parent="Background"]
+position = Vector2( 608, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet3" type="Sprite" parent="Background"]
+position = Vector2( 640, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet4" type="Sprite" parent="Background"]
+position = Vector2( 672, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet5" type="Sprite" parent="Background"]
+position = Vector2( 704, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet6" type="Sprite" parent="Background"]
+position = Vector2( 736, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet7" type="Sprite" parent="Background"]
+position = Vector2( 768, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet8" type="Sprite" parent="Background"]
+position = Vector2( 800, 0 )
+texture = ExtResource( 15 )
+
+[node name="Floor_Carpet9" type="Sprite" parent="Background"]
+position = Vector2( 832, 0 )
+texture = ExtResource( 15 )
+
+[node name="Wall2" type="Sprite" parent="Background"]
+position = Vector2( 576, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall3" type="Sprite" parent="Background"]
+position = Vector2( 608, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall4" type="Sprite" parent="Background"]
+position = Vector2( 640, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall8" type="Sprite" parent="Background"]
+position = Vector2( 672, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall13" type="Sprite" parent="Background"]
+position = Vector2( 704, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall14" type="Sprite" parent="Background"]
+position = Vector2( 736, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall15" type="Sprite" parent="Background"]
+position = Vector2( 768, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall16" type="Sprite" parent="Background"]
+position = Vector2( 800, -48 )
+texture = ExtResource( 4 )
+
+[node name="Wall17" type="Sprite" parent="Background"]
+position = Vector2( 832, -48 )
+texture = ExtResource( 4 )
+
+[node name="Elevator_Room" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( 80, 16 )
+
+[node name="Elevator_Room2" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( 464, 16 )
+
+[node name="Elevator_Room3" parent="Background" instance=ExtResource( 1 )]
+position = Vector2( 848, 16 )
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2( 0, -48 )
+
+[node name="Wall_Divider" type="Sprite" parent="Foreground"]
+texture = ExtResource( 5 )
+
+[node name="Door" parent="Foreground" instance=ExtResource( 2 )]
+position = Vector2( 8, 24 )
+
+[node name="PictureJohnSmith" type="Sprite" parent="Foreground"]
+position = Vector2( 296, 0 )
+texture = ExtResource( 13 )
+
+[node name="BulletinBoard" type="Sprite" parent="Foreground"]
+position = Vector2( 212, 8 )
+texture = ExtResource( 8 )
+
+[node name="PictureForce" type="Sprite" parent="Foreground"]
+position = Vector2( 432, -8 )
+texture = ExtResource( 7 )
+
+[node name="WaterCooler" type="Sprite" parent="Foreground"]
+position = Vector2( 264, 16 )
+texture = ExtResource( 11 )
+
+[node name="FilingCabinet" type="Sprite" parent="Foreground"]
+position = Vector2( 424, 16 )
+texture = ExtResource( 9 )
+
+[node name="FilingCabinet2" type="Sprite" parent="Foreground"]
+position = Vector2( 440, 16 )
+texture = ExtResource( 9 )
+
+[node name="WindowWall_Blinds_Tile" type="Sprite" parent="Foreground"]
+position = Vector2( 336, 16 )
+texture = ExtResource( 12 )
+
+[node name="Vent" type="Sprite" parent="Foreground"]
+position = Vector2( 400, 16 )
+texture = ExtResource( 14 )
+
+[node name="Chair" type="Sprite" parent="Foreground"]
+position = Vector2( 672, 16 )
+texture = ExtResource( 17 )
+
+[node name="Chair2" type="Sprite" parent="Foreground"]
+position = Vector2( 688, 16 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 17 )
+
+[node name="Chair4" type="Sprite" parent="Foreground"]
+position = Vector2( 728, 16 )
+texture = ExtResource( 17 )
+
+[node name="Chair3" type="Sprite" parent="Foreground"]
+position = Vector2( 744, 16 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 17 )
+
+[node name="Chair6" type="Sprite" parent="Foreground"]
+position = Vector2( 784, 16 )
+texture = ExtResource( 17 )
+
+[node name="Chair5" type="Sprite" parent="Foreground"]
+position = Vector2( 800, 16 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 17 )
+
+[node name="First" type="Sprite" parent="Foreground"]
+position = Vector2( 176, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+
+[node name="Table" type="Sprite" parent="Foreground"]
+position = Vector2( 680, 16 )
+texture = ExtResource( 16 )
+
+[node name="Table2" type="Sprite" parent="Foreground"]
+position = Vector2( 736, 16 )
+texture = ExtResource( 16 )
+
+[node name="Table3" type="Sprite" parent="Foreground"]
+position = Vector2( 792, 16 )
+texture = ExtResource( 16 )
+
+[node name="PoliceOfficer_Male1_Sitting" parent="Foreground" instance=ExtResource( 18 )]
+position = Vector2( 608, 16 )
+
+[node name="Phone" type="Sprite" parent="Foreground"]
+position = Vector2( 620, 16.25 )
+rotation = -3.14159
+scale = Vector2( 0.75, -0.75 )
+texture = ExtResource( 19 )
+
+[node name="Lamp" type="Sprite" parent="Foreground"]
+position = Vector2( 624, 16 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 20 )
+
+[node name="Flag" type="Sprite" parent="Foreground"]
+position = Vector2( 648, -16 )
+texture = ExtResource( 21 )
+
+[node name="Flag2" type="Sprite" parent="Foreground"]
+position = Vector2( 72, -16 )
+texture = ExtResource( 21 )
+
+[node name="PictureHills" type="Sprite" parent="Foreground"]
+position = Vector2( 736, -8 )
+texture = ExtResource( 22 )
+
+[node name="CeilingLight" parent="." instance=ExtResource( 23 )]
+position = Vector2( 240, -64 )
+
+[node name="CeilingLight2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 304, -64 )
+
+[node name="CeilingLight3" parent="." instance=ExtResource( 23 )]
+position = Vector2( 368, -64 )
+
+[node name="CeilingLight8" parent="." instance=ExtResource( 23 )]
+position = Vector2( 432, -64 )
+
+[node name="CeilingLight6" parent="." instance=ExtResource( 23 )]
+position = Vector2( 624, -64 )
+
+[node name="CeilingLight5" parent="." instance=ExtResource( 23 )]
+position = Vector2( 688, -64 )
+
+[node name="CeilingLight4" parent="." instance=ExtResource( 23 )]
+position = Vector2( 752, -64 )
+
+[node name="CeilingLight7" parent="." instance=ExtResource( 23 )]
+position = Vector2( 816, -64 )
