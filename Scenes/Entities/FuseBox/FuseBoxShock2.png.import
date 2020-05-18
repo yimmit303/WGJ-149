@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FuseBoxBlownUp11.png-c715588c5e33d0386bd36c87ae929876.stex"
+path="res://.import/FuseBoxShock2.png-22827abc13ff798851ac945a5a5ed443.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Entities/FuseBox/FuseBoxBlownUp11.png"
-dest_files=[ "res://.import/FuseBoxBlownUp11.png-c715588c5e33d0386bd36c87ae929876.stex" ]
+source_file="res://Scenes/Entities/FuseBox/FuseBoxShock2.png"
+dest_files=[ "res://.import/FuseBoxShock2.png-22827abc13ff798851ac945a5a5ed443.stex" ]
 
 [params]
 

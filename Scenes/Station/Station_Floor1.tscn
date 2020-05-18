@@ -321,9 +321,6 @@ position = Vector2( 304, -64 )
 [node name="CeilingLight3" parent="." instance=ExtResource( 23 )]
 position = Vector2( 368, -64 )
 
-[node name="PoliceOfficer_Male1_Sitting" parent="CeilingLight3" instance=ExtResource( 26 )]
-position = Vector2( 0, 35 )
-
 [node name="CeilingLight8" parent="." instance=ExtResource( 23 )]
 position = Vector2( 432, -64 )
 
@@ -346,3 +343,6 @@ texture = ExtResource( 25 )
 [node name="WaitingChair2" type="Sprite" parent="."]
 position = Vector2( 240, -32 )
 texture = ExtResource( 25 )
+
+[node name="Linda_Sitting" parent="." instance=ExtResource( 26 )]
+position = Vector2( 368, -32 )

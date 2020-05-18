@@ -29,7 +29,7 @@ animations = [ {
 "speed": 6.0
 } ]
 
-[node name="PoliceOfficer_Male1_Sitting" type="Node2D"]
+[node name="Linda_Sitting" type="Node2D"]
 script = ExtResource( 12 )
 
 [node name="Chair" type="Sprite" parent="."]
@@ -37,7 +37,7 @@ position = Vector2( 8, 0 )
 scale = Vector2( -1, 1 )
 texture = ExtResource( 2 )
 
-[node name="PoliceOfficer_Male1_Sitting_Sprite" type="AnimatedSprite" parent="."]
+[node name="Linda_Sitting_Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 16, 0 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 1 )
