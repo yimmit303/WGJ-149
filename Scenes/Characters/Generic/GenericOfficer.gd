@@ -4,13 +4,15 @@ var animator
 var navpoint_container
 var num_navpoints
 
-var speed = 100
+var speed = 20
 
 var gender
 var state
 var state_change_cooldown = 1.0
 var is_walking = false
 var busy = false
+var can_drink = false
+
 var destination
 
 
@@ -36,13 +38,16 @@ func _process(delta):
 			state_change_cooldown = 1.0
 			randomize()
 			var rand_choice = randi() % 3
-			if rand_choice == 0:
+			if rand_choice == 0: # decides to walk
 				if self.navpoint_container == null:
 					print("Failed to walk, no navpoints available")
 					return
-				var rand_navpoint = randi() % (num_navpoints - 1)
-				self.set_destination(navpoint_container.get_child(rand_navpoint).global_position)
-			elif rand_choice == 1:
+				var rand_navpoint_idx = randi() % (num_navpoints - 1)
+				var navpoint = navpoint_container.get_child(rand_navpoint_idx)
+				if navpoint.get_type() == "Water":
+					self.can_drink = true
+				self.set_destination(navpoint.global_position)
+			elif rand_choice == 1: # decides to eat
 				pass
 			else:
 				make_idle()
