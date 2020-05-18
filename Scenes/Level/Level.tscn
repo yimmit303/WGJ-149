@@ -202,5 +202,5 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
 [connection signal="camera_finsished" from="." to="UI/ObjectiveList" method="_on_Level_camera_finsished"]
+[connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
