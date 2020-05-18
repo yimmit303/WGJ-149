@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Resources/monofonto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Level/Timer.gd" type="Script" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://Scenes/Level/PlayerPlaceholder.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Level/Level.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Level/BackgroundPlaceholder.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Level/SkyPlaceholder.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Station/Environment/Cloud_3.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Station/Environment/Cloud_2.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -31,9 +38,71 @@ script = ExtResource( 5 )
 
 [node name="LevelTween" type="Tween" parent="."]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BGParallax" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="SkyPlaceholder" type="Sprite" parent="ParallaxBackground/BGParallax"]
+position = Vector2( 960, -540 )
+texture = ExtResource( 7 )
+
+[node name="DayCounter" type="Label" parent="ParallaxBackground/BGParallax/SkyPlaceholder"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1048.0
+margin_top = -559.5
+margin_right = -872.0
+margin_bottom = -520.5
+custom_fonts/font = SubResource( 5 )
+text = "5 days left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StationPlaceholder" type="Sprite" parent="ParallaxBackground/BGParallax"]
 texture = ExtResource( 6 )
 centered = false
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1, 1.1 )
+
+[node name="Cloud_3" type="Sprite" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2( 362.456, -530.787 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+
+[node name="Cloud_4" type="Sprite" parent="ParallaxBackground/ParallaxLayer1"]
+position = Vector2( 433.546, -502.97 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1, 1.5 )
+
+[node name="Cloud_4" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 788.223, -313.5 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+
+[node name="Cloud_2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 1518.6, -282.464 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1, 2 )
+
+[node name="Cloud_4" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 1511.79, -686.629 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+
+[node name="Cloud_3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 752.065, -1302.45 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 9 )
 
 [node name="Player" type="Sprite" parent="."]
 position = Vector2( 123.432, 979.595 )
@@ -41,7 +110,7 @@ scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 960, 540 )
+position = Vector2( 960, -540 )
 current = true
 
 [node name="UI" type="Control" parent="."]
@@ -127,4 +196,5 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
 [connection signal="camera_finsished" from="." to="UI/ObjectiveList" method="_on_Level_camera_finsished"]
