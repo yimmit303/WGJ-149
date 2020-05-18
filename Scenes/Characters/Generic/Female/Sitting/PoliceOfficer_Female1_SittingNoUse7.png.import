@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PoliceOfficer_Female1_SittingNoUse4.png-fd5176309b2002f4d815dc577f2d5e8a.stex"
+path="res://.import/PoliceOfficer_Female1_SittingNoUse7.png-e274cf863ed3cef714fcfd071b5b61f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Characters/Generic/Female/Using/PoliceOfficer_Female1_SittingNoUse4.png"
-dest_files=[ "res://.import/PoliceOfficer_Female1_SittingNoUse4.png-fd5176309b2002f4d815dc577f2d5e8a.stex" ]
+source_file="res://Scenes/Characters/Generic/Female/Sitting/PoliceOfficer_Female1_SittingNoUse7.png"
+dest_files=[ "res://.import/PoliceOfficer_Female1_SittingNoUse7.png-e274cf863ed3cef714fcfd071b5b61f4.stex" ]
 
 [params]
 
