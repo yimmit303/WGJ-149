@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Scenes/Characters/Generic/Male/Eating/PoliceOfficer_Male1_Eating5.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Generic/Male/Idle/PoliceOfficer_Male1_Idle2.png" type="Texture" id=2]
@@ -38,28 +38,25 @@
 [ext_resource path="res://Scenes/Characters/Generic/Male/RaiseHands/PoliceOfficer_Male1_RaiseHands2.png" type="Texture" id=36]
 [ext_resource path="res://Scenes/Characters/Generic/Male/RaiseHands/PoliceOfficer_Male1_RaiseHands3.png" type="Texture" id=37]
 [ext_resource path="res://Scenes/Characters/Generic/Male/RaiseHands/PoliceOfficer_Male1_RaiseHands1.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Characters/Generic/GenericOfficer.gd" type="Script" id=39]
+[ext_resource path="res://Scenes/Characters/NPCArea.tscn" type="PackedScene" id=40]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "Use",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 38 ), ExtResource( 36 ), ExtResource( 37 ) ],
 "loop": false,
 "name": "RaiseHands",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "Drinking",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "Walking",
 "speed": 8.0
-}, {
-"frames": [ ExtResource( 31 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 29 ) ],
-"loop": false,
-"name": "Drinking",
-"speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 12 ) ],
 "loop": true,
@@ -70,12 +67,24 @@ animations = [ {
 "loop": false,
 "name": "Eating",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "Use",
+"speed": 5.0
 } ]
 
 [node name="PoliceOfficer_Male1" type="Node2D"]
+script = ExtResource( 39 )
 
 [node name="PoliceOfficer_Male1_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Drinking"
 frame = 7
 playing = true
+
+[node name="NPCArea" parent="." instance=ExtResource( 40 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.1, 0.1 )
