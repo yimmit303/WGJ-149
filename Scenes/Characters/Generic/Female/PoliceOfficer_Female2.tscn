@@ -1,0 +1,69 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle1.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking5.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle4.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking7.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk2.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle3.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking2.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking8.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking9.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking10.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle5.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Characters/Generic/Female/RaiseHands/PoliceOfficer_Female2_RaiseHands2.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking3.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Using/PoliceOfficer_Female2_Use4.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Using/PoliceOfficer_Female2_Use5.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk1.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking6.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking4.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk3.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle7.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Smoking1.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk5.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Idle/PoliceOfficer_Female2_Idle6.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Characters/Generic/Female/RaiseHands/PoliceOfficer_Female2_RaiseHands1.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk4.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Characters/Generic/Female/RaiseHands/PoliceOfficer_Female2_RaiseHands3.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk6.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk8.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk9.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Characters/Generic/Female/Walking/PoliceOfficer_Female2_Walk7.png" type="Texture" id=31]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Walking",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Use",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 13 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "RaiseHands",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Smoking",
+"speed": 6.0
+} ]
+
+[node name="PoliceOfficer_Female2" type="Node2D"]
+
+[node name="PoliceOfficer_Female2_Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Walking"
+frame = 4
+playing = true
