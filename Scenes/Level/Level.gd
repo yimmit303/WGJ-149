@@ -2,6 +2,8 @@ extends Node2D
 
 signal camera_finsished
 
+export(NodePath) var player_path
+
 var days_left = 5
 
 var wait_a_sec = 5
@@ -39,3 +41,5 @@ func pan_camera():
 										animation_time, tween_type, ease_type)
 	$LevelTween.start()
 
+func get_player():
+	return get_node(player_path)
