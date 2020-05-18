@@ -1,19 +1,130 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle1.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player/Player.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock7.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle3.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle5.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock14.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock1.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip4.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock11.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock18.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock13.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock12.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip5.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle7.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock17.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle6.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock10.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip1.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip3.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock3.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip2.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle4.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock5.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock15.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock6.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock9.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Player/Idle/JohnMorgan_Idle2.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock16.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock19.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock20.png" type="Texture" id=31]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock8.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip6.png" type="Texture" id=33]
+[ext_resource path="res://Scenes/Player/Shock/JohnMorgan_Shock4.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use16.png" type="Texture" id=35]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip8.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun2.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip10.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use13.png" type="Texture" id=39]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use2.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip11.png" type="Texture" id=41]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip14.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun3.png" type="Texture" id=43]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use7.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use10.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use8.png" type="Texture" id=46]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun7.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip12.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun5.png" type="Texture" id=49]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun1.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use6.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun6.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use14.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use15.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use17.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use12.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip15.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip13.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use3.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip9.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use4.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use5.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Player/Stun/JohnMorgan_Stun4.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use9.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use11.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Player/Slip/JohnMorgan_Slip7.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk5.png" type="Texture" id=67]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk6.png" type="Texture" id=68]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk2.png" type="Texture" id=69]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use18.png" type="Texture" id=70]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk3.png" type="Texture" id=71]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk9.png" type="Texture" id=72]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk4.png" type="Texture" id=73]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk8.png" type="Texture" id=74]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk7.png" type="Texture" id=75]
+[ext_resource path="res://Scenes/Player/Use/JohnMorgan_Use19.png" type="Texture" id=76]
+[ext_resource path="res://Scenes/Player/Walk/JohnMorgan_Walk1.png" type="Texture" id=77]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 50 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 63 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "Stun",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 66 ), ExtResource( 36 ), ExtResource( 60 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 58 ), ExtResource( 42 ), ExtResource( 57 ) ],
+"loop": false,
+"name": "Slip",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 69 ), ExtResource( 71 ), ExtResource( 73 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 72 ) ],
+"loop": true,
+"name": "Walking",
+"speed": 13.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 4 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 18 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "Shock",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 28 ), ExtResource( 5 ), ExtResource( 23 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 59 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 51 ), ExtResource( 44 ), ExtResource( 46 ), ExtResource( 64 ), ExtResource( 45 ), ExtResource( 65 ), ExtResource( 56 ), ExtResource( 39 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 35 ), ExtResource( 55 ), ExtResource( 70 ), ExtResource( 76 ) ],
+"loop": false,
+"name": "Use",
+"speed": 6.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 1.54592, 2.95295 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+[node name="JohnMorgan_Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Walking"
+frame = 7
+playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 5, 5 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
