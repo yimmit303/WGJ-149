@@ -26,7 +26,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 14.9905, 14.5618 )
+extents = Vector2( 12.4514, 14.5618 )
 
 [node name="Door" type="Node2D"]
 script = ExtResource( 3 )
@@ -40,7 +40,9 @@ playing = true
 [node name="OpenArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenArea"]
-position = Vector2( -5.12283, -1.58557 )
+position = Vector2( -1.89114, -1.58557 )
 shape = SubResource( 2 )
+[connection signal="area_entered" from="OpenArea" to="." method="_on_OpenArea_area_entered"]
+[connection signal="area_exited" from="OpenArea" to="." method="_on_OpenArea_area_exited"]
 [connection signal="body_entered" from="OpenArea" to="." method="_on_OpenArea_body_entered"]
 [connection signal="body_exited" from="OpenArea" to="." method="_on_OpenArea_body_exited"]
