@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Station/Elevator_Room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Station/Door.tscn" type="PackedScene" id=2]
@@ -23,6 +23,9 @@
 [ext_resource path="res://Scenes/Station/Props/Flag.png" type="Texture" id=21]
 [ext_resource path="res://Scenes/Station/Props/PictureHills.png" type="Texture" id=22]
 [ext_resource path="res://Scenes/Station/CeilingLight.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Station/Props/Banner.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Station/Props/WaitingChair.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Characters/Linda/Linda_Sitting.tscn" type="PackedScene" id=26]
 
 [node name="Station_Floor1" type="Node2D"]
 
@@ -189,6 +192,11 @@ position = Vector2( 464, 16 )
 [node name="Elevator_Room3" parent="Background" instance=ExtResource( 1 )]
 position = Vector2( 848, 16 )
 
+[node name="Banner" type="Sprite" parent="Background"]
+position = Vector2( 368, -37 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 24 )
+
 [node name="Foreground" type="Node2D" parent="."]
 position = Vector2( 0, -48 )
 
@@ -313,6 +321,9 @@ position = Vector2( 304, -64 )
 [node name="CeilingLight3" parent="." instance=ExtResource( 23 )]
 position = Vector2( 368, -64 )
 
+[node name="PoliceOfficer_Male1_Sitting" parent="CeilingLight3" instance=ExtResource( 26 )]
+position = Vector2( 0, 35 )
+
 [node name="CeilingLight8" parent="." instance=ExtResource( 23 )]
 position = Vector2( 432, -64 )
 
@@ -327,3 +338,11 @@ position = Vector2( 752, -64 )
 
 [node name="CeilingLight7" parent="." instance=ExtResource( 23 )]
 position = Vector2( 816, -64 )
+
+[node name="WaitingChair" type="Sprite" parent="."]
+position = Vector2( 288, -32 )
+texture = ExtResource( 25 )
+
+[node name="WaitingChair2" type="Sprite" parent="."]
+position = Vector2( 240, -32 )
+texture = ExtResource( 25 )
