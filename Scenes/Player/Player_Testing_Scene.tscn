@@ -26,16 +26,16 @@ position = Vector2( 2309.03, 103.531 )
 rotation = 1.5511
 
 [node name="Banana" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1064.91, 1046.07 )
+position = Vector2( 1065.31, 1070.3 )
 
 [node name="Anvil" parent="." instance=ExtResource( 4 )]
 position = Vector2( 844.065, 672.246 )
 
 [node name="Puddle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 577.495, 1052.17 )
+position = Vector2( 576.414, 1078.65 )
 
 [node name="Wires" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1217.34, 1053.3 )
+position = Vector2( 1217.34, 1076.7 )
 
 [node name="Glass" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1310.5, 1041.42 )
+position = Vector2( 1150.5, 1078.78 )

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Resources/basic.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Entities/Puddle/Puddle.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Entities/Puddle.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 85.054, 24.133 )
+extents = Vector2( 28.4494, 8.07995 )
 
 [node name="Puddle" type="Area2D"]
 collision_layer = 2
@@ -14,5 +14,4 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 170, 20 )
 texture = ExtResource( 1 )
