@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Resources/monofonto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Level/Timer.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scenes/Level/SkyPlaceholder.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Station/Environment/Cloud_3.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Station/Environment/Cloud_2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Station/Station_Mockup.tscn" type="PackedScene" id=10]
 
 [sub_resource type="DynamicFont" id=5]
 size = 32
@@ -64,6 +65,11 @@ __meta__ = {
 [node name="StationPlaceholder" type="Sprite" parent="ParallaxBackground/BGParallax"]
 texture = ExtResource( 6 )
 centered = false
+
+[node name="NPC" type="Node2D" parent="ParallaxBackground/BGParallax"]
+
+[node name="Node2D" parent="ParallaxBackground/BGParallax" instance=ExtResource( 10 )]
+position = Vector2( 745.874, 977.312 )
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 1, 1.1 )
@@ -196,5 +202,5 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
 [connection signal="camera_finsished" from="." to="UI/ObjectiveList" method="_on_Level_camera_finsished"]
+[connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
