@@ -1,9 +1,10 @@
 extends Node2D
 
 var animator
+var navpoint_container
+var num_navpoints
 
-
-var speed = 10
+var speed = 100
 
 var gender
 var state
@@ -23,6 +24,9 @@ func _ready():
 	animator.connect("animation_finished", self, "on_animation_finished")
 	self.state = "Idle"
 	
+	self.navpoint_container = get_node("../Navpoints")
+	self.num_navpoints = navpoint_container.get_child_count()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -31,12 +35,13 @@ func _process(delta):
 		if state_change_cooldown <= 0:
 			state_change_cooldown = 1.0
 			randomize()
-			var rand_choice = randi() % 100
+			var rand_choice = randi() % 3
 			if rand_choice == 0:
-				var direction = 1
-				if randf() > 0.5:
-					direction *= -1
-				self.set_destination(self.position + Vector2(32 * direction, 0))
+				if self.navpoint_container == null:
+					print("Failed to walk, no navpoints available")
+					return
+				var rand_navpoint = randi() % (num_navpoints - 1)
+				self.set_destination(navpoint_container.get_child(rand_navpoint).global_position)
 			elif rand_choice == 1:
 				pass
 			else:
@@ -45,13 +50,18 @@ func _process(delta):
 	else:	# The NPC is busy, no state changes can happen until they are done
 		if is_walking:
 			var direction = self.position.direction_to(self.destination)
+			if direction.x > 0:
+				direction.x = ceil(direction.x)
+			else:
+				direction.x = floor(direction.x)
+			direction.y = 0
 			self.position += direction * speed * delta
 			
 			animator.flip_h = false
 			if direction.x == -1:
 				animator.flip_h = true
-			
-			if self.position.distance_to(self.destination) <= 1:
+			print(abs(self.position.x - self.destination.x))
+			if abs(self.position.x - self.destination.x) <= 1:
 				self.is_walking = false
 				self.busy = false
 				make_idle()
