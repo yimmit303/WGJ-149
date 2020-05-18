@@ -199,6 +199,14 @@ position = Vector2( 368, -37 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 24 )
 
+[node name="WaitingChair" type="Sprite" parent="Background"]
+position = Vector2( 272, -16 )
+texture = ExtResource( 25 )
+
+[node name="WaitingChair2" type="Sprite" parent="Background"]
+position = Vector2( 224, -16 )
+texture = ExtResource( 25 )
+
 [node name="Foreground" type="Node2D" parent="."]
 position = Vector2( 0, -48 )
 
@@ -314,6 +322,12 @@ texture = ExtResource( 21 )
 position = Vector2( 736, -8 )
 texture = ExtResource( 22 )
 
+[node name="Linda_Sitting" parent="Foreground" instance=ExtResource( 26 )]
+position = Vector2( 368, 16 )
+
+[node name="PoliceOfficer_Male1" parent="." instance=ExtResource( 28 )]
+position = Vector2( 536, -24 )
+
 [node name="CeilingLight" parent="." instance=ExtResource( 23 )]
 position = Vector2( 240, -64 )
 
@@ -338,28 +352,14 @@ position = Vector2( 752, -64 )
 [node name="CeilingLight7" parent="." instance=ExtResource( 23 )]
 position = Vector2( 816, -64 )
 
-[node name="WaitingChair" type="Sprite" parent="."]
-position = Vector2( 288, -32 )
-texture = ExtResource( 25 )
-
-[node name="WaitingChair2" type="Sprite" parent="."]
-position = Vector2( 240, -32 )
-texture = ExtResource( 25 )
-
-[node name="Linda_Sitting" parent="." instance=ExtResource( 26 )]
-position = Vector2( 368, -32 )
-
 [node name="Navpoints" type="Node2D" parent="."]
 position = Vector2( 352, -16 )
 
-[node name="Navpoint2" parent="Navpoints" instance=ExtResource( 27 )]
-
 [node name="Navpoint" parent="Navpoints" instance=ExtResource( 27 )]
-position = Vector2( -88, 8 )
+position = Vector2( -88, 0 )
 type = "Water"
 
-[node name="PoliceOfficer_Male1" parent="Navpoints/Navpoint" instance=ExtResource( 28 )]
-position = Vector2( -216, -16 )
+[node name="Navpoint2" parent="Navpoints" instance=ExtResource( 27 )]
 
 [node name="Navpoint3" parent="Navpoints" instance=ExtResource( 27 )]
 position = Vector2( -128, 0 )
