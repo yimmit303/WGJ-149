@@ -29,6 +29,7 @@ animations = [ {
 extents = Vector2( 9.3736, 14.5618 )
 
 [node name="Door" type="Node2D"]
+z_index = 1
 script = ExtResource( 3 )
 
 [node name="DoorSprite" type="AnimatedSprite" parent="."]
