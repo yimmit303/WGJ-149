@@ -29,7 +29,7 @@ rotation = 1.5511
 position = Vector2( 1065.31, 1070.3 )
 
 [node name="Anvil" parent="." instance=ExtResource( 4 )]
-position = Vector2( 844.065, 672.246 )
+position = Vector2( 824.512, 1017.92 )
 
 [node name="Puddle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 576.414, 1078.65 )
