@@ -12,7 +12,7 @@
 position = Vector2( -0.610779, -240 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 610.35, 746.893 )
+position = Vector2( 262.154, 748.4 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2001.45, 1186.04 )
@@ -32,7 +32,7 @@ position = Vector2( 1064.91, 1046.07 )
 position = Vector2( 844.065, 672.246 )
 
 [node name="Puddle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 279.042, 1059.71 )
+position = Vector2( 577.495, 1052.17 )
 
 [node name="Wires" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1217.34, 1053.3 )
