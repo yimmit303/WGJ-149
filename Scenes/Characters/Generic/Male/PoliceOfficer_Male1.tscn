@@ -79,12 +79,14 @@ script = ExtResource( 39 )
 
 [node name="PoliceOfficer_Male1_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Drinking"
-frame = 7
+animation = "Idle"
+frame = 1
 playing = true
 
 [node name="NPCArea" parent="." instance=ExtResource( 40 )]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1.28784, 0.429279 )
 current = true
-zoom = Vector2( 0.1, 0.1 )
+zoom = Vector2( 0.25, 0.25 )
+limit_bottom = 32
