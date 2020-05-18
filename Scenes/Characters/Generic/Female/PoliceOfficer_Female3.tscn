@@ -24,25 +24,25 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "Walking",
-"speed": 9.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 17 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "Use",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 20 ) ],
 "loop": true,
+"name": "Walking",
+"speed": 9.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"loop": false,
 "name": "RaiseHands",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 6.0
 } ]
 
 [node name="PoliceOfficer_Female3" type="Node2D"]

@@ -41,7 +41,7 @@
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 22 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": true,
+"loop": false,
 "name": "Eating",
 "speed": 6.0
 }, {
@@ -50,25 +50,25 @@ animations = [ {
 "name": "Walking",
 "speed": 9.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
+"name": "Use",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"loop": false,
 "name": "Drinking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "RaiseHands",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 20 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 6.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "Use",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "RaiseHands",
-"speed": 5.0
 } ]
 
 [node name="PoliceOfficer_Male2" type="Node2D"]
@@ -76,5 +76,5 @@ animations = [ {
 [node name="PoliceOfficer_Male2_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Drinking"
-frame = 5
+frame = 6
 playing = true
