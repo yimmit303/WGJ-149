@@ -33,20 +33,27 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if not busy:	# The NPC is not doing something else
+		if can_drink:
+			drink_water()
+			can_drink = false
+			return
 		state_change_cooldown -= delta
 		if state_change_cooldown <= 0:
 			state_change_cooldown = 1.0
 			randomize()
 			var rand_choice = randi() % 3
 			if rand_choice == 0: # decides to walk
+				
 				if self.navpoint_container == null:
 					print("Failed to walk, no navpoints available")
 					return
+				
 				var rand_navpoint_idx = randi() % (num_navpoints - 1)
 				var navpoint = navpoint_container.get_child(rand_navpoint_idx)
 				if navpoint.get_type() == "Water":
 					self.can_drink = true
 				self.set_destination(navpoint.global_position)
+				
 			elif rand_choice == 1: # decides to eat
 				pass
 			else:
@@ -82,6 +89,12 @@ func make_idle():
 	self.state = "Idle"
 	self.animator.animation = "Idle"
 
+func drink_water():
+	self.state = "Drinking"
+	self.busy = true
+	self.animator.animation = "Drinking"
+	# TODO: Random chance to spill water
+
 func on_animation_finished():
 	match animator.animation:
 		"Eating":
@@ -89,6 +102,7 @@ func on_animation_finished():
 			print("Done eating")
 		"Drinking":
 			busy = false
+			make_idle()
 			print("Done drinking")
 		"RaiseHands":
 			busy = false
