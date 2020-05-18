@@ -68,13 +68,19 @@ func process_input():
 	return ret_vec;
 	
 func on_banana_slip(body):
-	print("I have slipped on a banana.");
+	print("Wow, who could've seen that one coming?");
 	slipped = true;
 
 func on_anvil_hit(body):
-	print("oof, anvil hit me.");
+	print("Who keeps an anvil on the ceiling anyway?");
 
 func on_puddle_slip(body):
 	print("woah, we hydroplaning.");
 	lock_movement = true;
 	puddle_dir = process_input();
+
+func on_wire_trip(body):
+	print("Wow, shocking.");
+
+func on_glass_trip(body):
+	print("Ouch! #!");

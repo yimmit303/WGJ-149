@@ -1,16 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player/TestDebugFloor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Entities/Banana.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Entities/Anvil.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Entities/Puddle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Entities/Wires.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Entities/Glass.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( -0.610779, -240 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 610.35, 746.893 )
+position = Vector2( 262.154, 748.4 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2001.45, 1186.04 )
@@ -24,10 +26,16 @@ position = Vector2( 2309.03, 103.531 )
 rotation = 1.5511
 
 [node name="Banana" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1458.23, 1051.65 )
+position = Vector2( 1064.91, 1046.07 )
 
 [node name="Anvil" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1212.28, 675.036 )
+position = Vector2( 844.065, 672.246 )
 
 [node name="Puddle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 892.734, 1068.08 )
+position = Vector2( 577.495, 1052.17 )
+
+[node name="Wires" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1217.34, 1053.3 )
+
+[node name="Glass" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1310.5, 1041.42 )
