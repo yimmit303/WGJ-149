@@ -34,29 +34,29 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "Walking",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 21 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "Use",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 13 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "Smoking",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 6 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
+"name": "Walking",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 13 ), ExtResource( 27 ) ],
+"loop": false,
 "name": "RaiseHands",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 8 ), ExtResource( 14 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "Smoking",
+"name": "Idle",
 "speed": 6.0
 } ]
 
@@ -65,5 +65,5 @@ animations = [ {
 [node name="PoliceOfficer_Female2_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Walking"
-frame = 4
+frame = 6
 playing = true
