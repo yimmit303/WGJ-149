@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Elevator6.png-759a7f4dd3e30fa7b71bfdf6e4a9347c.stex"
+path="res://.import/Elevator12.png-360c1262bd45a71906df95e56acf1db6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Station/Environment/Animated/Elevator6.png"
-dest_files=[ "res://.import/Elevator6.png-759a7f4dd3e30fa7b71bfdf6e4a9347c.stex" ]
+source_file="res://Scenes/Interactables/Elevator/Elevator12.png"
+dest_files=[ "res://.import/Elevator12.png-360c1262bd45a71906df95e56acf1db6.stex" ]
 
 [params]
 
