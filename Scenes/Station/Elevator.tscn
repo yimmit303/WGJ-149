@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/Animated/Elevator6.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Animated/Elevator5.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Station/Environment/Animated/Elevator7.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Station/Environment/Animated/Elevator14.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Station/Elevator.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Station/Environment/Elevator.png" type="Texture" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -26,10 +27,13 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 43.4675, 22.5002 )
+extents = Vector2( 30.6249, 22.5002 )
 
 [node name="Elevator" type="Node2D"]
 script = ExtResource( 11 )
+
+[node name="Elevator" type="Sprite" parent="."]
+texture = ExtResource( 12 )
 
 [node name="ElevatorSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
