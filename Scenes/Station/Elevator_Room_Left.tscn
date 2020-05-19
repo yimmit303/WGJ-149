@@ -5,8 +5,9 @@
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Station/Environment/Wall_Divider.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Station/Props/FloorDisplay.png" type="Texture" id=5]
-[ext_resource path="res://Scenes/Station/Elevator.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Interactables/Elevator.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Station/Door.tscn" type="PackedScene" id=7]
+
 
 [node name="Elevator_Room" type="Node2D"]
 

@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scenes/Station/Elevator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Interactables/Elevator.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Station/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Station/Environment/Floor_Tile.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Station/Environment/Wall_Divider.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Station/Props/ElevatorButton.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Station/Props/FloorDisplay.png" type="Texture" id=7]
+
 
 [node name="Elevator_Room" type="Node2D"]
 
