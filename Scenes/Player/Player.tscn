@@ -85,11 +85,6 @@ animations = [ {
 "name": "Idle",
 "speed": 6.0
 }, {
-"frames": [ ExtResource( 50 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 63 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 47 ) ],
-"loop": true,
-"name": "Stun",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 77 ), ExtResource( 69 ), ExtResource( 71 ), ExtResource( 73 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 72 ) ],
 "loop": true,
 "name": "Walking",
@@ -104,6 +99,11 @@ animations = [ {
 "loop": false,
 "name": "Use",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 50 ), ExtResource( 37 ), ExtResource( 43 ), ExtResource( 63 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "Stun",
+"speed": 8.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 33 ), ExtResource( 66 ), ExtResource( 36 ), ExtResource( 60 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 58 ), ExtResource( 42 ), ExtResource( 57 ) ],
 "loop": false,
@@ -120,7 +120,7 @@ script = ExtResource( 2 )
 [node name="JohnMorgan_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
