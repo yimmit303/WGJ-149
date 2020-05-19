@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/Station/Elevator.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator6.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator11.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator12.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Station/Environment/Elevator.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Interactables/Elevator/Elevator5_border.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -41,10 +42,13 @@ animation = "Close"
 frame = 8
 playing = true
 
-[node name="OpenArea" type="Area2D" parent="."]
+[node name="InteractHighlight" type="Sprite" parent="."]
+texture = ExtResource( 13 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenArea"]
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2( 0.713486, -11.1779 )
 shape = SubResource( 2 )
-[connection signal="body_entered" from="OpenArea" to="." method="_on_OpenArea_body_entered"]
-[connection signal="body_exited" from="OpenArea" to="." method="_on_OpenArea_body_exited"]
+[connection signal="body_entered" from="InteractArea" to="." method="_on_OpenArea_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_OpenArea_body_exited"]
