@@ -15,11 +15,12 @@ func load_level_objectives():
 
 
 func _on_Level_camera_finsished():
-	var child_list = get_children()
-	for i in range(2, get_child_count()):
-		var thread = Thread.new()
-		thread.start(self, "animate_obj", child_list[i])
-		OS.delay_msec(100)
+#	var child_list = get_children()
+#	for i in range(2, get_child_count()):
+#		var thread = Thread.new()
+#		thread.start(self, "animate_obj", child_list[i])
+#		OS.delay_msec(100)
+	pass
 
 func _player_interacted(object_name, object_details):
 	pass

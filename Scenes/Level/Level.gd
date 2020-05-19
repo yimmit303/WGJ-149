@@ -14,12 +14,12 @@ func _ready():
 	$Camera.position = Vector2(960, -540)
 	$Camera.zoom = Vector2(.8, .8)
 	# TODO
-	$LevelTween.interpolate_property(	get_node("ParallaxBackground/BGParallax/SkyPlaceholder/DayCounter"), "modulate",
-										Color(1,1,1,0), Color(1,1,1,1), 3.0, Tween.TRANS_EXPO)
-	$LevelTween.interpolate_property(	get_node("ParallaxBackground/BGParallax/SkyPlaceholder/DayCounter"), "percent_visible",
-										0, 1, 3.0, Tween.TRANS_LINEAR)
-	$LevelTween.start()
-	yield($LevelTween, "tween_all_completed")
+#	$LevelTween.interpolate_property(	get_node("ParallaxBackground/BGParallax/SkyPlaceholder/DayCounter"), "modulate",
+#										Color(1,1,1,0), Color(1,1,1,1), 3.0, Tween.TRANS_EXPO)
+#	$LevelTween.interpolate_property(	get_node("ParallaxBackground/BGParallax/SkyPlaceholder/DayCounter"), "percent_visible",
+#										0, 1, 3.0, Tween.TRANS_LINEAR)
+#	$LevelTween.start()
+#	yield($LevelTween, "tween_all_completed")
 	start_camera()
 	
 
