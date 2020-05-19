@@ -17,9 +17,11 @@ var lock_timer = 0.0;
 var stunned = false;
 var lock_movement = false;
 var facing_left = false;
+var can_move = true;
 
 var puddle_dir = Vector2();
 var animator;
+var interactable = null;
 
 func _ready():
 	animator = get_node("JohnMorgan_Sprite");
@@ -40,53 +42,66 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP);
 
 func effect_timer(delta):
-		if lock_movement:
-			lock_timer += delta;
-			if lock_timer >= stun_timer:
-				lock_movement = false;
-				lock_timer = 0.0;
+	if lock_movement:
+		lock_timer += delta;
+		if lock_timer >= stun_timer:
+			lock_movement = false;
+			lock_timer = 0.0;
 
+func interact_area_entered(_body, interactable):
+	print("new interactable ", interactable)
+	self.interactable = interactable
+
+func interact_area_exited(_body, area):
+	print("losing interactable")
+	interactable = null;
+	
+
+func _input(event):
+	if not stunned and interactable != null:
+		interactable.interact(event)
 
 func process_input():
-	var tmp_vel = velocity;
 	var ret_vec = Vector2();
-	var moved = false;
-	var sprinting = false;
-	if not stunned:
-		if Input.is_action_pressed("sprint"):
-			cur_max = sprint_max;
-			sprinting = true;
-		else:
-			cur_max = walk_max;
-		if Input.is_action_pressed("move_right"):
-			if facing_left:
-				scale.x = -1;
-				facing_left = false;
-			tmp_vel.x += move_force;
-			if tmp_vel.length_squared() < pow(cur_max, 2):
-				velocity.x += move_force;
-				moved = true;
-		elif Input.is_action_pressed("move_left"):
-			if not facing_left:
-				scale.x = -1;
-				facing_left = true;
-			tmp_vel.x -= move_force;
-			if tmp_vel.length_squared() < pow(cur_max, 2):
-				velocity.x -= move_force;
-				moved = true;
-				
-	if not moved and is_on_floor():
-		# floor friction, only applies when not accelerating
-		velocity.x *= 1.0 - friction;
-	elif not moved and not is_on_floor():
-		# air friction, only applies when not accelerating
-		velocity.x *= 1.0 - (friction * 0.1);
-	if not moved and velocity.length_squared() <= 300:
-		# Stops the velocity if it gets below min-threshold and not moving
-		velocity.x = 0;
-		animator.animation = "Idle";
-	if moved:
-		animator.animation = "Walking";
+	if can_move:
+		var tmp_vel = velocity;
+		var moved = false;
+		var sprinting = false;
+		if not stunned:
+			if Input.is_action_pressed("sprint"):
+				cur_max = sprint_max;
+				sprinting = true;
+			else:
+				cur_max = walk_max;
+			if Input.is_action_pressed("move_right"):
+				if facing_left:
+					scale.x = -1;
+					facing_left = false;
+				tmp_vel.x += move_force;
+				if tmp_vel.length_squared() < pow(cur_max, 2):
+					velocity.x += move_force;
+					moved = true;
+			elif Input.is_action_pressed("move_left"):
+				if not facing_left:
+					scale.x = -1;
+					facing_left = true;
+				tmp_vel.x -= move_force;
+				if tmp_vel.length_squared() < pow(cur_max, 2):
+					velocity.x -= move_force;
+					moved = true;
+					
+		if not moved and is_on_floor():
+			# floor friction, only applies when not accelerating
+			velocity.x *= 1.0 - friction;
+		elif not moved and not is_on_floor():
+			# air friction, only applies when not accelerating
+			velocity.x *= 1.0 - (friction * 0.1);
+		if not moved and velocity.length_squared() <= 300:
+			# Stops the velocity if it gets below min-threshold and not moving
+			velocity.x = 0;
+			animator.animation = "Idle";
+		if moved:
+			animator.animation = "Walking";
 	return ret_vec;
 	
 func on_banana_slip(body):
