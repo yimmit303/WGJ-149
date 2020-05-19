@@ -16,19 +16,19 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "Close",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": false,
 "name": "Open",
 "speed": 15.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "Close",
+"speed": 15.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 30.6249, 22.5002 )
+extents = Vector2( 21.7684, 12.8221 )
 
 [node name="Elevator" type="Node2D"]
 script = ExtResource( 1 )
@@ -50,5 +50,7 @@ texture = ExtResource( 13 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
 position = Vector2( 0.713486, -11.1779 )
 shape = SubResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
 [connection signal="body_entered" from="InteractArea" to="." method="_on_OpenArea_body_entered"]
 [connection signal="body_exited" from="InteractArea" to="." method="_on_OpenArea_body_exited"]
