@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/Floor_Tile.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=2]
@@ -24,6 +24,10 @@
 [ext_resource path="res://Scenes/Station/Props/StackOfPapers.png" type="Texture" id=22]
 [ext_resource path="res://Scenes/Station/Props/StackOfFolders.png" type="Texture" id=23]
 [ext_resource path="res://Scenes/Entities/Wires.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Station/Props/Cabinet.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Station/Props/Refrigerator.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Station/Props/Microwave.png" type="Texture" id=28]
 
 [node name="Station_Floor3" type="Node2D"]
 
@@ -262,7 +266,7 @@ texture = ExtResource( 3 )
 position = Vector2( 104, 40 )
 
 [node name="bigDesk" type="Sprite" parent="Foreground"]
-position = Vector2( -384, 32 )
+position = Vector2( -392, 32 )
 texture = ExtResource( 21 )
 
 [node name="bigDesk2" type="Sprite" parent="Foreground"]
@@ -280,6 +284,27 @@ texture = ExtResource( 23 )
 [node name="StackOfPapers" type="Sprite" parent="Foreground"]
 position = Vector2( -263, 32 )
 texture = ExtResource( 22 )
+
+[node name="Cabinet" type="Sprite" parent="Foreground"]
+position = Vector2( -403, 27 )
+texture = ExtResource( 25 )
+
+[node name="Microwave" type="Sprite" parent="Foreground"]
+position = Vector2( -411, 30 )
+texture = ExtResource( 28 )
+
+[node name="Refrigerator" type="Sprite" parent="Foreground"]
+position = Vector2( -372, 33 )
+texture = ExtResource( 26 )
+
+[node name="Chair" type="Sprite" parent="Foreground"]
+position = Vector2( -328, 32 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 27 )
+
+[node name="Wires" parent="Foreground" instance=ExtResource( 24 )]
+position = Vector2( 208, 24 )
 
 [node name="CeilingLight6" parent="Foreground" instance=ExtResource( 14 )]
 
@@ -341,6 +366,3 @@ position = Vector2( 792, 16 )
 
 [node name="Navpoint14" parent="NavPoints" instance=ExtResource( 13 )]
 position = Vector2( 936, 16 )
-
-[node name="Wires" parent="." instance=ExtResource( 24 )]
-position = Vector2( 832, -40 )

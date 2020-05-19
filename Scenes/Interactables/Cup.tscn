@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Interactables/Cup_Coffee/Cup3.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Interactables/Cup_Coffee/Cup2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Interactables/Cup_Coffee/Cup1.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Interactables/Cup_Coffee/Cup4.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Steam",
+"speed": 7.0
+} ]
+
+[node name="Cup" type="Node2D"]
+
+[node name="Cup_Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Steam"
+playing = true
