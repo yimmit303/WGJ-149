@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Resources/monofonto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/Level/Timer.gd" type="Script" id=2]
@@ -9,6 +9,11 @@
 [ext_resource path="res://Scenes/Level/SkyPlaceholder.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Station/Environment/Cloud_3.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Station/Environment/Cloud_2.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Station/Station_Floor4.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Station/Station_Floor5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Station/Station_Floor3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Station/Station_Floor2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Station/Facade.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -65,6 +70,25 @@ __meta__ = {
 
 [node name="Player" parent="ParallaxBackground/BGParallax" instance=ExtResource( 4 )]
 position = Vector2( 107.146, 1029.46 )
+
+[node name="Station_Floor1" parent="ParallaxBackground/BGParallax" instance=ExtResource( 6 )]
+position = Vector2( 488, 1064 )
+
+[node name="Station_Floor2" parent="ParallaxBackground/BGParallax" instance=ExtResource( 13 )]
+position = Vector2( 488, 984 )
+
+[node name="Station_Floor3" parent="ParallaxBackground/BGParallax" instance=ExtResource( 12 )]
+position = Vector2( 488, 904 )
+
+[node name="Station_Floor4" parent="ParallaxBackground/BGParallax" instance=ExtResource( 10 )]
+position = Vector2( 488, 824 )
+
+[node name="Station_Floor5" parent="ParallaxBackground/BGParallax" instance=ExtResource( 11 )]
+position = Vector2( 488, 744 )
+
+[node name="Facade" parent="ParallaxBackground/BGParallax" instance=ExtResource( 14 )]
+visible = false
+position = Vector2( 488, 1064 )
 
 [node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 1, 1.1 )
@@ -192,8 +216,5 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Station_Floor1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 486.127, 1071.01 )
 [connection signal="camera_finsished" from="." to="UI/Timer" method="_on_Level_camera_finsished"]
 [connection signal="camera_finsished" from="." to="UI/ObjectiveList" method="_on_Level_camera_finsished"]
