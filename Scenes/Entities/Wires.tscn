@@ -18,19 +18,19 @@
 [ext_resource path="res://Scenes/Entities/FuseBox/FuseBoxShock3.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.9337, 10 )
+extents = Vector2( 16.2794, 16.1331 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 11 ) ],
-"loop": false,
-"name": "Inactive",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Shock",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "Inactive",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 16 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": false,
@@ -53,6 +53,7 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.270554, -0.135277 )
 shape = SubResource( 1 )
 
 [node name="Wires_Sprite" type="AnimatedSprite" parent="."]
