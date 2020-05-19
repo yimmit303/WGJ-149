@@ -192,12 +192,6 @@ texture = ExtResource( 4 )
 position = Vector2( 832, -48 )
 texture = ExtResource( 4 )
 
-[node name="Elevator_Room" parent="Background" instance=ExtResource( 1 )]
-position = Vector2( 80, 16 )
-
-[node name="Elevator_Room2" parent="Background" instance=ExtResource( 1 )]
-position = Vector2( 464, 16 )
-
 [node name="Banner" type="Sprite" parent="Background"]
 position = Vector2( 368, -37 )
 scale = Vector2( 0.75, 0.75 )
@@ -355,6 +349,12 @@ position = Vector2( 816, -16 )
 
 [node name="Elevator_Room" parent="Foreground" instance=ExtResource( 29 )]
 position = Vector2( 864, 48 )
+
+[node name="Elevator_Room2" parent="Foreground" instance=ExtResource( 1 )]
+position = Vector2( 96, 48 )
+
+[node name="Elevator_Room3" parent="Foreground" instance=ExtResource( 1 )]
+position = Vector2( 480, 48 )
 
 [node name="PoliceOfficer_Male1" parent="." instance=ExtResource( 28 )]
 position = Vector2( 536, -24 )

@@ -39,12 +39,15 @@ position = Vector2( 16, -16 )
 
 [node name="Elevator_Room2" parent="Background" instance=ExtResource( 19 )]
 position = Vector2( 464, 16 )
+floor_num = 4
 
 [node name="Elevator_Room" parent="Background" instance=ExtResource( 22 )]
 position = Vector2( 848, 16 )
+floor_num = 4
 
 [node name="Elevator_Room3" parent="Background" instance=ExtResource( 21 )]
 position = Vector2( 80, 16 )
+floor_num = 4
 
 [node name="WindowWall_Blinds" type="Sprite" parent="Background"]
 position = Vector2( 320, -16 )

@@ -97,9 +97,6 @@ texture = ExtResource( 9 )
 position = Vector2( 832, -48 )
 texture = ExtResource( 9 )
 
-[node name="Elevator_Room2" parent="Background" instance=ExtResource( 23 )]
-position = Vector2( 464, 16 )
-
 [node name="HoldingCell_Wall" type="Sprite" parent="Background"]
 position = Vector2( 192, -16 )
 texture = ExtResource( 2 )
@@ -158,9 +155,15 @@ texture = ExtResource( 6 )
 
 [node name="Elevator_Room" parent="Foreground" instance=ExtResource( 28 )]
 position = Vector2( 240, 64 )
+floor_num = 2
+
+[node name="Elevator_Room3" parent="Foreground" instance=ExtResource( 23 )]
+position = Vector2( -144, 64 )
+floor_num = 2
 
 [node name="Elevator_Room2" parent="Foreground" instance=ExtResource( 1 )]
 position = Vector2( -528, 64 )
+floor_num = 2
 
 [node name="Door" parent="Foreground" instance=ExtResource( 29 )]
 position = Vector2( 40, 40 )

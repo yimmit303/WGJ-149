@@ -104,12 +104,15 @@ texture = ExtResource( 2 )
 
 [node name="Elevator_Room2" parent="Background" instance=ExtResource( 15 )]
 position = Vector2( 464, 16 )
+floor_num = 3
 
 [node name="Elevator_Room" parent="Background" instance=ExtResource( 18 )]
 position = Vector2( 848, 16 )
+floor_num = 3
 
 [node name="Elevator_Room3" parent="Background" instance=ExtResource( 17 )]
 position = Vector2( 80, 16 )
+floor_num = 3
 
 [node name="Floor_Tile" type="Sprite" parent="Background"]
 position = Vector2( 576, 0 )
