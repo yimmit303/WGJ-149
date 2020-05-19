@@ -1,19 +1,26 @@
 extends KinematicBody2D
+
 var gravity = Vector2(0, 9.81);
 var velocity = Vector2();
+var friction = 0.17;
+
 var sprint_max = 200.0;
 var walk_max = 90.0;
 var cur_max = walk_max;
-var friction = 0.17;
+
 var move_force = 4;
+
 var stun_timer = 2.0;
 var slip_timer = 0.0;
+var lock_timer = 0.0;
+
 var stunned = false;
 var lock_movement = false;
 var facing_left = false;
-var lock_timer = 0.0;
+
 var puddle_dir = Vector2();
 var animator;
+
 func _ready():
 	animator = get_node("JohnMorgan_Sprite");
 	animator.animation = "Idle";
