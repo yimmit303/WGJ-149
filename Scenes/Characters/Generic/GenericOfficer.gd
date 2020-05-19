@@ -79,9 +79,6 @@ func _process(delta):
 				make_idle()
 
 func set_destination(point):
-	print("My destination is ", point)
-	print("My position is ", self.position)
-	print("My global position is ", self.global_position)
 	self.state = "Walking"
 	self.animator.animation = "Walking"
 	self.is_walking = true
