@@ -27,7 +27,8 @@ func _ready():
 	self.state = "Idle"
 	
 	self.navpoint_container = get_node("../Navpoints")
-	self.num_navpoints = navpoint_container.get_child_count()
+	if self.navpoint_container != null:
+		self.num_navpoints = navpoint_container.get_child_count()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,24 +62,26 @@ func _process(delta):
 				
 	else:	# The NPC is busy, no state changes can happen until they are done
 		if is_walking:
-			var direction = self.position.direction_to(self.destination)
+			var direction = self.global_position.direction_to(self.destination)
 			if direction.x > 0:
 				direction.x = ceil(direction.x)
 			else:
 				direction.x = floor(direction.x)
 			direction.y = 0
-			self.position += direction * speed * delta
+			self.global_position += direction * speed * delta
 			
 			animator.flip_h = false
 			if direction.x == -1:
 				animator.flip_h = true
-			print(abs(self.position.x - self.destination.x))
-			if abs(self.position.x - self.destination.x) <= 1:
+			if abs(self.global_position.x - self.destination.x) <= 1:
 				self.is_walking = false
 				self.busy = false
 				make_idle()
 
 func set_destination(point):
+	print("My destination is ", point)
+	print("My position is ", self.position)
+	print("My global position is ", self.global_position)
 	self.state = "Walking"
 	self.animator.animation = "Walking"
 	self.is_walking = true
