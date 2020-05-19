@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/Floor_Tile.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://Scenes/Station/Props/Refrigerator.png" type="Texture" id=26]
 [ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=27]
 [ext_resource path="res://Scenes/Station/Props/Microwave.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=29]
 
 [node name="Station_Floor3" type="Node2D"]
 
@@ -369,3 +370,5 @@ position = Vector2( 792, 16 )
 
 [node name="Navpoint14" parent="NavPoints" instance=ExtResource( 13 )]
 position = Vector2( 936, 16 )
+
+[node name="FloorCollision" parent="." instance=ExtResource( 29 )]

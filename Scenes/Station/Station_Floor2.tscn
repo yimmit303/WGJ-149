@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scenes/Station/Elevator_Room_Right.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Station/Environment/HoldingCell_Wall.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Station/Props/Second.png" type="Texture" id=8]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Station/Environment/Wall_Divider.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Station/Environment/Vent.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Station/Props/WaitingChair.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Station/Props/Flag.png" type="Texture" id=19]
@@ -259,3 +260,5 @@ position = Vector2( 840, 16 )
 
 [node name="Navpoint14" parent="NavPoints" instance=ExtResource( 24 )]
 position = Vector2( 936, 16 )
+
+[node name="FloorCollision" parent="." instance=ExtResource( 11 )]
