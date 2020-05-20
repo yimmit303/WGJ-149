@@ -223,6 +223,8 @@ texture = ExtResource( 27 )
 position = Vector2( -353, 32 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+behavior = 2
+idle_amount = 0.3
 
 [node name="PoliceOfficer_Male2_Sitting2" parent="Foreground" instance=ExtResource( 28 )]
 position = Vector2( -32, 32 )
@@ -231,9 +233,12 @@ position = Vector2( -32, 32 )
 position = Vector2( 24, 32 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+behavior = 2
 
 [node name="PoliceOfficer_Female3_Sitting" parent="Foreground" instance=ExtResource( 16 )]
 position = Vector2( 48, 32 )
+behavior = 2
+idle_amount = 0.9
 
 [node name="PoliceOfficer_Female1_Sitting" parent="Foreground" instance=ExtResource( 17 )]
 position = Vector2( 103, 32 )
