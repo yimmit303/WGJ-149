@@ -1,0 +1,23 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/UI/Arrow/Arrow1.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/UI/Arrow/Arrow5.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/UI/Arrow/Arrow2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/UI/Arrow/Arrow4.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UI/Arrow/Arrow3.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/UI/Arrow/Arrow6.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Spin",
+"speed": 10.0
+} ]
+
+[node name="Arrow" type="AnimatedSprite"]
+position = Vector2( 0, -18.1201 )
+frames = SubResource( 3 )
+animation = "Spin"
+frame = 3
+playing = true
