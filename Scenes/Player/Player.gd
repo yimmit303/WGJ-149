@@ -23,6 +23,8 @@ var puddle_dir = Vector2();
 var animator;
 var interactable = null;
 
+var inventory = []
+
 func _ready():
 	animator = get_node("JohnMorgan_Sprite");
 	animator.animation = "Idle";
