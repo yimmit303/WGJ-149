@@ -342,6 +342,7 @@ position = Vector2( 292.762, -36.1538 )
 
 [node name="Cabinet" parent="Interactables" instance=ExtResource( 31 )]
 position = Vector2( 460.431, -31.6865 )
+floor_num = 3
 
 [node name="NavPoints" type="Node2D" parent="."]
 

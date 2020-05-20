@@ -228,9 +228,11 @@ texture = ExtResource( 8 )
 
 [node name="Cabinet" parent="Interactables" instance=ExtResource( 13 )]
 position = Vector2( 592, -32 )
+floor_num = 2
 
 [node name="Cabinet2" parent="Interactables" instance=ExtResource( 13 )]
 position = Vector2( 640, -32 )
+floor_num = 2
 
 [node name="NavPoints" type="Node2D" parent="."]
 

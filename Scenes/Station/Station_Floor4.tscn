@@ -348,12 +348,15 @@ position = Vector2( -192, 0 )
 
 [node name="Cabinet" parent="Interactables" instance=ExtResource( 33 )]
 position = Vector2( 440, -32 )
+floor_num = 4
 
 [node name="Cabinet2" parent="Interactables" instance=ExtResource( 33 )]
 position = Vector2( 360, -32 )
+floor_num = 4
 
 [node name="Cabinet3" parent="Interactables" instance=ExtResource( 33 )]
 position = Vector2( 832, -32 )
+floor_num = 4
 
 [node name="NavPoints" type="Node2D" parent="."]
 
