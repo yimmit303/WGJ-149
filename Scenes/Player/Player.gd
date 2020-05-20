@@ -49,11 +49,10 @@ func effect_timer(delta):
 			lock_timer = 0.0;
 
 func interact_area_entered(_body, interactable):
-	print("new interactable ", interactable)
+	yield(get_tree().create_timer(0.01), "timeout")	# Don't even ask, I don't like it either
 	self.interactable = interactable
 
 func interact_area_exited(_body, area):
-	print("losing interactable")
 	interactable = null;
 	
 
