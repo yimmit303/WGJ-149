@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scenes/Station/Elevator_Room_Right.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Station/Environment/HoldingCell_Wall.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Station/Environment/Wall_Divider.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Station/Environment/Vent.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Interactables/Cabinet.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Station/Props/WaitingChair.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/Station/Props/Flag.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=21]
@@ -224,6 +225,12 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 
 [node name="Interactables" type="Node2D" parent="."]
+
+[node name="Cabinet" parent="Interactables" instance=ExtResource( 13 )]
+position = Vector2( 592, -32 )
+
+[node name="Cabinet2" parent="Interactables" instance=ExtResource( 13 )]
+position = Vector2( 640, -32 )
 
 [node name="NavPoints" type="Node2D" parent="."]
 

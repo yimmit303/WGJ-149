@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/Floor_Tile.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Scenes/Station/Props/Microwave.png" type="Texture" id=28]
 [ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=29]
 [ext_resource path="res://Scenes/Interactables/Cup.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Interactables/Cabinet.tscn" type="PackedScene" id=31]
 
 [node name="Station_Floor3" type="Node2D"]
 
@@ -338,6 +339,9 @@ position = Vector2( -192, 0 )
 
 [node name="Cup" parent="Interactables" instance=ExtResource( 30 )]
 position = Vector2( 292.762, -36.1538 )
+
+[node name="Cabinet" parent="Interactables" instance=ExtResource( 31 )]
+position = Vector2( 460.431, -31.6865 )
 
 [node name="NavPoints" type="Node2D" parent="."]
 

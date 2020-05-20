@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/WindowWall_NoBlinds.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=2]
@@ -32,6 +32,7 @@
 [ext_resource path="res://Scenes/Station/Environment/WindowWall_Blinds.png" type="Texture" id=30]
 [ext_resource path="res://Scenes/Entities/Wires.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Scenes/Interactables/Cabinet.tscn" type="PackedScene" id=33]
 
 [node name="Station_Floor4" type="Node2D"]
 
@@ -195,16 +196,8 @@ texture = ExtResource( 9 )
 position = Vector2( -200, 32 )
 texture = ExtResource( 8 )
 
-[node name="FilingCabinet2" type="Sprite" parent="Foreground"]
-position = Vector2( -184, 32 )
-texture = ExtResource( 8 )
-
 [node name="FilingCabinet3" type="Sprite" parent="Foreground"]
 position = Vector2( -168, 32 )
-texture = ExtResource( 8 )
-
-[node name="FilingCabinet4" type="Sprite" parent="Foreground"]
-position = Vector2( -264, 32 )
 texture = ExtResource( 8 )
 
 [node name="WaterCooler" type="Sprite" parent="Foreground"]
@@ -247,10 +240,6 @@ scale = Vector2( 1, -1 )
 
 [node name="PoliceOfficer_Male1_Sitting2" parent="Foreground" instance=ExtResource( 11 )]
 position = Vector2( 128, 32 )
-
-[node name="FilingCabinet5" type="Sprite" parent="Foreground"]
-position = Vector2( 208, 32 )
-texture = ExtResource( 8 )
 
 [node name="FilingCabinet6" type="Sprite" parent="Foreground"]
 position = Vector2( 224, 32 )
@@ -356,6 +345,15 @@ position = Vector2( -256, 0 )
 position = Vector2( -192, 0 )
 
 [node name="Interactables" type="Node2D" parent="."]
+
+[node name="Cabinet" parent="Interactables" instance=ExtResource( 33 )]
+position = Vector2( 440, -32 )
+
+[node name="Cabinet2" parent="Interactables" instance=ExtResource( 33 )]
+position = Vector2( 360, -32 )
+
+[node name="Cabinet3" parent="Interactables" instance=ExtResource( 33 )]
+position = Vector2( 832, -32 )
 
 [node name="NavPoints" type="Node2D" parent="."]
 
