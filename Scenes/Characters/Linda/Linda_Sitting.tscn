@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Scenes/Station/Props/Lamp.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=2]
@@ -11,26 +11,33 @@
 [ext_resource path="res://Scenes/Characters/Linda/Sitting/Linda_SittingNoUse7.png" type="Texture" id=9]
 [ext_resource path="res://Scenes/Characters/Linda/Sitting/Linda_SittingNoUse1.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Characters/Linda/Sitting/Linda_SittingNoUse3.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/Characters/Generic/GenericSitting.gd" type="Script" id=12]
+[ext_resource path="res://Scenes/Characters/Linda/Linda.gd" type="Script" id=12]
 [ext_resource path="res://Scenes/Station/Props/bigDesk.png" type="Texture" id=13]
 [ext_resource path="res://Scenes/Characters/Linda/Sitting/Linda_SittingNoUse6.png" type="Texture" id=14]
 [ext_resource path="res://Scenes/Characters/Linda/Sitting/Linda_SittingNoUse5.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/UI/Arrow.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Station/Props/bigDesk_border.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "Use",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "NotUse",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Use",
+"speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.8674, 9.11569 )
 
 [node name="Linda_Sitting" type="Node2D"]
 script = ExtResource( 12 )
+behavior = 2
+idle_amount = 0.2
 
 [node name="Chair" type="Sprite" parent="."]
 position = Vector2( 8, 0 )
@@ -42,6 +49,7 @@ position = Vector2( 16, 0 )
 scale = Vector2( -1, 1 )
 frames = SubResource( 1 )
 animation = "Use"
+frame = 1
 playing = true
 
 [node name="bigDesk" type="Sprite" parent="."]
@@ -60,3 +68,17 @@ texture = ExtResource( 1 )
 position = Vector2( 5, 0.3 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 6 )
+
+[node name="Arrow" parent="." instance=ExtResource( 16 )]
+position = Vector2( 15.4928, -26.0554 )
+frame = 0
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2( 11.3362, 0 )
+shape = SubResource( 2 )
+
+[node name="InteractHighlight" type="Sprite" parent="."]
+position = Vector2( 19, 0 )
+texture = ExtResource( 17 )
