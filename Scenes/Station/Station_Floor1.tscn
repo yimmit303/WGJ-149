@@ -356,6 +356,8 @@ position = Vector2( 96, 48 )
 [node name="Elevator_Room3" parent="Foreground" instance=ExtResource( 1 )]
 position = Vector2( 480, 48 )
 
+[node name="Interactables" type="Node2D" parent="."]
+
 [node name="PoliceOfficer_Male1" parent="." instance=ExtResource( 28 )]
 position = Vector2( 536, -24 )
 

@@ -420,6 +420,8 @@ position = Vector2( -256, 0 )
 [node name="CeilingLight8" parent="Foreground" instance=ExtResource( 20 )]
 position = Vector2( -192, 0 )
 
+[node name="Interactables" type="Node2D" parent="."]
+
 [node name="NavPoints" type="Node2D" parent="."]
 
 [node name="Navpoint" parent="NavPoints" instance=ExtResource( 23 )]

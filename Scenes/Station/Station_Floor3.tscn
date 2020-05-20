@@ -334,8 +334,10 @@ position = Vector2( -256, 0 )
 [node name="CeilingLight8" parent="Foreground" instance=ExtResource( 14 )]
 position = Vector2( -192, 0 )
 
-[node name="Cup" parent="Foreground" instance=ExtResource( 30 )]
-position = Vector2( -331.238, 27.8462 )
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Cup" parent="Interactables" instance=ExtResource( 30 )]
+position = Vector2( 292.762, -36.1538 )
 
 [node name="NavPoints" type="Node2D" parent="."]
 
