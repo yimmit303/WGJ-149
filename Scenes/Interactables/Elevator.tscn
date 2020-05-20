@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Interactables/Elevator.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator6.png" type="Texture" id=2]
@@ -13,17 +13,18 @@
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator12.png" type="Texture" id=11]
 [ext_resource path="res://Scenes/Station/Environment/Elevator.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Interactables/Elevator/Elevator5_border.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/UI/Arrow.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ],
-"loop": false,
-"name": "Open",
-"speed": 15.0
-}, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": false,
 "name": "Close",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "Open",
 "speed": 15.0
 } ]
 
@@ -52,5 +53,10 @@ position = Vector2( -0.111755, -11.0404 )
 shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Arrow" parent="." instance=ExtResource( 14 )]
+visible = false
+position = Vector2( 0.275085, -44.9405 )
+frame = 1
 [connection signal="body_entered" from="InteractArea" to="." method="_on_OpenArea_body_entered"]
 [connection signal="body_exited" from="InteractArea" to="." method="_on_OpenArea_body_exited"]

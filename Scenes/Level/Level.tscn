@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Resources/monofonto.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scenes/UI/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Station/Station_Floor.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Level/Level.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Station/Station_Floor1.tscn" type="PackedScene" id=6]
@@ -45,20 +46,27 @@ __meta__ = {
 
 [node name="NPC" type="Node2D" parent="."]
 
-[node name="Station_Floor1" parent="." instance=ExtResource( 6 )]
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Station_Floor1" parent="Floors" instance=ExtResource( 6 )]
 position = Vector2( 488, 1064 )
+script = ExtResource( 3 )
 
-[node name="Station_Floor2" parent="." instance=ExtResource( 13 )]
+[node name="Station_Floor2" parent="Floors" instance=ExtResource( 13 )]
 position = Vector2( 488, 984 )
+script = ExtResource( 3 )
 
-[node name="Station_Floor3" parent="." instance=ExtResource( 12 )]
+[node name="Station_Floor3" parent="Floors" instance=ExtResource( 12 )]
 position = Vector2( 488, 904 )
+script = ExtResource( 3 )
 
-[node name="Station_Floor4" parent="." instance=ExtResource( 10 )]
+[node name="Station_Floor4" parent="Floors" instance=ExtResource( 10 )]
 position = Vector2( 488, 824 )
+script = ExtResource( 3 )
 
-[node name="Station_Floor5" parent="." instance=ExtResource( 11 )]
+[node name="Station_Floor5" parent="Floors" instance=ExtResource( 11 )]
 position = Vector2( 488, 744 )
+script = ExtResource( 3 )
 
 [node name="Facade" parent="." instance=ExtResource( 14 )]
 visible = false

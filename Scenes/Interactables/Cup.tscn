@@ -25,7 +25,6 @@ script = ExtResource( 6 )
 [node name="Cup_Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Steam"
-frame = 3
 playing = true
 
 [node name="InteractHighlight" type="Sprite" parent="."]
@@ -37,4 +36,4 @@ texture = ExtResource( 5 )
 shape = SubResource( 2 )
 
 [node name="Arrow" parent="." instance=ExtResource( 7 )]
-frame = 1
+frame = 0

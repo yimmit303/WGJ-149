@@ -54,7 +54,6 @@ func interact_area_entered(_body, interactable):
 
 func interact_area_exited(_body, area):
 	interactable = null;
-	
 
 func _input(event):
 	if not stunned and interactable != null:

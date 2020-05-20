@@ -11,6 +11,11 @@ func _ready():
 	type = "Elevator"
 	details = []
 
+func _process(delta):	# Overwrite so the elevator can glow even if it is not a goal
+	if active:
+		highlight.modulate.a += highlight_mod_speed * delta
+		highlight.modulate.a = fmod(highlight.modulate.a, 1.0)
+
 func fade_out():
 	player.gravity = Vector2(0, 0)
 	player.velocity = Vector2(0, 0)

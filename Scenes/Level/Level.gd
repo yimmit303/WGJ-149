@@ -43,3 +43,12 @@ func pan_camera():
 
 func get_player():
 	return get_node(player_path)
+
+func get_objective_list():
+	return get_node("CanvasLayer/UI/ObjectiveBackground/ObjectiveList")
+
+func get_level_interactables():
+	var interactable_lists = []
+	for floor_node in get_node("Floors").get_children():
+		interactable_lists.append(floor_node.get_interactables())
+	return interactable_lists
