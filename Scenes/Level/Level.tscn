@@ -113,4 +113,11 @@ position = Vector2( 536, 1040 )
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2( 960, -540 )
 
-[node name="UI" parent="." instance=ExtResource( 2 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 2 )]
+margin_right = 0.00012207
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 1920, 1080 )
+mouse_filter = 2
