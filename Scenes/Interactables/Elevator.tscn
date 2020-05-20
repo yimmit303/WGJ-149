@@ -28,7 +28,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.7684, 12.8221 )
+extents = Vector2( 16.5228, 12.8221 )
 
 [node name="Elevator" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,7 +48,7 @@ texture = ExtResource( 13 )
 [node name="InteractArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2( 0.713486, -11.1779 )
+position = Vector2( -0.111755, -11.0404 )
 shape = SubResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
