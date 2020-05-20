@@ -11,7 +11,6 @@ func _ready():
 	pass # Replace with function body.
 
 func fade_out():
-	
 	player.gravity = Vector2(0, 0)
 	player.velocity = Vector2(0, 0)
 	player.animator.animation = "Idle"
