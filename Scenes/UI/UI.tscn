@@ -1,0 +1,108 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Level/Timer.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level/ObjectiveList.gd" type="Script" id=2]
+[ext_resource path="res://Resources/monofonto.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+outline_size = 1
+outline_color = Color( 0.443137, 0.443137, 0.443137, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 64
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+outline_size = 1
+outline_color = Color( 0.443137, 0.443137, 0.443137, 1 )
+font_data = ExtResource( 3 )
+
+[node name="UI" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+theme = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "5:00"
+align = 1
+valign = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ObjectiveList" type="VBoxContainer" parent="."]
+anchor_left = 0.79
+anchor_right = 0.99
+anchor_bottom = 1.0
+margin_left = 403.2
+margin_right = -0.800171
+grow_horizontal = 0
+rect_min_size = Vector2( 200, 0 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopSpacer" type="Control" parent="ObjectiveList"]
+margin_right = 384.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+size_flags_stretch_ratio = 0.25
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveList"]
+margin_top = 204.0
+margin_right = 384.0
+margin_bottom = 282.0
+custom_fonts/font = SubResource( 4 )
+text = "Objectives:"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ObjectiveList"]
+margin_top = 286.0
+margin_right = 384.0
+margin_bottom = 316.0
+size_flags_horizontal = 3
+text = "Get coffee from the breakroom "
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ObjectiveList"]
+margin_top = 320.0
+margin_right = 384.0
+margin_bottom = 350.0
+text = "Talk to officer Smith"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="ObjectiveList"]
+margin_top = 354.0
+margin_right = 384.0
+margin_bottom = 384.0
+text = "Get the files from the 2nd floor"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
