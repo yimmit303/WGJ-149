@@ -8,7 +8,8 @@ var moving = false
 var floor_num
 
 func _ready():
-	pass # Replace with function body.
+	type = "Elevator"
+	details = []
 
 func fade_out():
 	player.gravity = Vector2(0, 0)
