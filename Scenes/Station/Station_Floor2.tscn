@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scenes/Station/Elevator_Room_Right.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Station/Environment/HoldingCell_Wall.png" type="Texture" id=2]
@@ -13,7 +13,10 @@
 [ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Station/Environment/Vent.png" type="Texture" id=12]
 [ext_resource path="res://Scenes/Interactables/Cabinet.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Station/Props/WaitingChair.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male3.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male2.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Scenes/Station/Props/Flag.png" type="Texture" id=19]
 [ext_resource path="res://Scenes/Station/Props/Chair.png" type="Texture" id=21]
 [ext_resource path="res://Scenes/Station/CeilingLight.tscn" type="PackedScene" id=22]
@@ -233,6 +236,18 @@ floor_num = 2
 [node name="Cabinet2" parent="Interactables" instance=ExtResource( 13 )]
 position = Vector2( 640, -32 )
 floor_num = 2
+
+[node name="PoliceOfficer_Male3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 696, -24 )
+
+[node name="PoliceOfficer_Male2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 504, -24 )
+
+[node name="PoliceOfficer_Male1" parent="." instance=ExtResource( 14 )]
+position = Vector2( 896, -24 )
+
+[node name="PoliceOfficer_Male4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 112, -24 )
 
 [node name="NavPoints" type="Node2D" parent="."]
 

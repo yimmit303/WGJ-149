@@ -26,7 +26,7 @@ func _ready():
 	animator.connect("animation_finished", self, "on_animation_finished")
 	self.state = "Idle"
 	
-	self.navpoint_container = get_node("../Navpoints")
+	self.navpoint_container = get_node("../NavPoints")
 	if self.navpoint_container != null:
 		self.num_navpoints = navpoint_container.get_child_count()
 	

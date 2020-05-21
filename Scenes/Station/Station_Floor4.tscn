@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/WindowWall_NoBlinds.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Wall.png" type="Texture" id=2]
@@ -33,6 +33,11 @@
 [ext_resource path="res://Scenes/Entities/Wires.tscn" type="PackedScene" id=31]
 [ext_resource path="res://Scenes/Station/FloorCollision.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Scenes/Interactables/Cabinet.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male1.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male3.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Scenes/Characters/Generic/Female/PoliceOfficer_Female1.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Scenes/Characters/Generic/Female/PoliceOfficer_Female3.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Scenes/Characters/Generic/Male/PoliceOfficer_Male2.tscn" type="PackedScene" id=38]
 
 [node name="Station_Floor4" type="Node2D"]
 
@@ -368,6 +373,7 @@ position = Vector2( 296, 16 )
 
 [node name="Navpoint3" parent="NavPoints" instance=ExtResource( 20 )]
 position = Vector2( 376, 16 )
+type = "Water"
 
 [node name="Navpoint4" parent="NavPoints" instance=ExtResource( 20 )]
 position = Vector2( 336, 16 )
@@ -400,3 +406,22 @@ position = Vector2( 712, 16 )
 position = Vector2( 904, 16 )
 
 [node name="FloorCollision" parent="." instance=ExtResource( 32 )]
+
+[node name="PoliceOfficer_Male1" parent="." instance=ExtResource( 34 )]
+position = Vector2( 320, -24 )
+
+[node name="PoliceOfficer_Male2" parent="." instance=ExtResource( 34 )]
+position = Vector2( 464, -24 )
+
+[node name="PoliceOfficer_Male3" parent="." instance=ExtResource( 35 )]
+visible = true
+position = Vector2( 416, -24 )
+
+[node name="PoliceOfficer_Female3" parent="." instance=ExtResource( 37 )]
+position = Vector2( 736, -24 )
+
+[node name="PoliceOfficer_Female1" parent="." instance=ExtResource( 36 )]
+position = Vector2( 632, -24 )
+
+[node name="PoliceOfficer_Male4" parent="." instance=ExtResource( 38 )]
+position = Vector2( 256, -24 )

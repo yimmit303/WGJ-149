@@ -438,6 +438,14 @@ position = Vector2( 376, 16 )
 [node name="Navpoint4" parent="NavPoints" instance=ExtResource( 23 )]
 position = Vector2( 336, 16 )
 
+[node name="Navpoint16" parent="NavPoints" instance=ExtResource( 23 )]
+position = Vector2( 304, 16 )
+type = "Water"
+
+[node name="Navpoint17" parent="NavPoints" instance=ExtResource( 23 )]
+position = Vector2( 296, 16 )
+type = "Water"
+
 [node name="Navpoint5" parent="NavPoints" instance=ExtResource( 23 )]
 position = Vector2( 280, 16 )
 
@@ -448,7 +456,8 @@ position = Vector2( 528, 16 )
 position = Vector2( 432, 16 )
 
 [node name="Navpoint7" parent="NavPoints" instance=ExtResource( 23 )]
-position = Vector2( 664, 16 )
+position = Vector2( 672, 16 )
+type = "Water"
 
 [node name="Navpoint8" parent="NavPoints" instance=ExtResource( 23 )]
 position = Vector2( 608, 16 )
