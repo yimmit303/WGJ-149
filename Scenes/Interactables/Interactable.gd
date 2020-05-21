@@ -50,7 +50,7 @@ func interact(event):
 	print("I have been interacted with!!!")
 	
 func get_formatted_text():
-	return "ERROR: called from base function!"
+	return text_format
 
 func player_entered(body):
 	if body.name == "Player":
