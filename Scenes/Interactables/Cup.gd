@@ -3,7 +3,11 @@ extends "res://Scenes/Interactables/Interactable.gd"
 func _ready():
 	type = "Coffee"
 	details = []
-	text_format = "Get coffee from the break room"
+	if randf() > 0.5:
+		text_format = "Get coffee from the break room"
+		player.inventory.append("Coffee")
+	else:
+		text_format = "Get yourself some coffee"
 
 func interact(event):
 	if goal:

@@ -12,12 +12,8 @@ var switch_timer = 1.0
 func _ready():
 	type = "Character"
 	details = ["Linda"]
-	if len(player.inventory) > 0:
-		var item = player.inventory[0]
-		details.append(item)
-		text_format = "Give the " + item + "to Linda"
-	else:
-		text_format = "Talk to Linda"
+
+	text_format = "Talk to Linda"
 	animator = self.get_child(1)
 	if behavior == Behavior.ALWAYS_IDLE:
 		self.animator.animation = "NotUse"
@@ -38,6 +34,15 @@ func interact(event):
 	if goal:
 		if event is InputEventKey and event.pressed == true and event.echo == false and event.scancode == KEY_E:
 			emit_signal("player_interacted", self, type, details)
+
+func make_goal():
+	.make_goal()
+	if len(player.inventory) > 0:
+		var item = player.inventory[0]
+		details.append(item)
+		text_format = "Give the " + item + " to Linda"
+	else:
+		text_format = "Talk to Linda"
 
 func get_formatted_text():
 	return text_format

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Station/Environment/Facade_Window.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Station/Environment/Facade_Pillar.png" type="Texture" id=2]
@@ -7,1879 +7,1883 @@
 [ext_resource path="res://Scenes/Station/Environment/Facade_Window2.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Station/Environment/Facade_Wall2.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Station/Environment/Facade_Divider.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Station/Facade.gd" type="Script" id=8]
 
 [node name="Facade" type="Node2D"]
+script = ExtResource( 8 )
 
-[node name="Facade_Sprite(NoFade)" type="Node2D" parent="."]
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Facade_Walls" type="Node2D" parent="."]
 z_index = 2
 
-[node name="Walls" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Walls" type="Node2D" parent="Facade_Walls"]
 
-[node name="Facade_Wall2" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall2" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 16, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall3" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall3" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 80, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall4" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall4" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 112, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall51" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall51" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 112, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall56" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall56" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 112, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall5" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall5" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 208, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall7" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall7" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 272, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall8" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall8" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 304, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall9" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall9" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 368, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall10" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall10" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 400, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall11" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall11" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 432, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall12" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall12" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 464, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall16" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall16" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 560, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall15" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall15" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 592, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall14" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall14" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 624, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall19" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall19" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 656, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall18" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall18" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 688, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall17" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall17" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 720, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall22" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall22" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 752, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall21" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall21" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 784, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall20" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall20" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 816, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall25" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall25" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 848, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall24" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall24" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 880, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall23" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall23" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 944, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall13" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall13" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 496, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall6" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall6" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 176, -32 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall45" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall45" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 176, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall57" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall57" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 208, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall58" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall58" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 240, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall59" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall59" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 304, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall60" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall60" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 336, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall61" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall61" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 368, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall62" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall62" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 400, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall63" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall63" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 432, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall64" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall64" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 464, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall65" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall65" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 496, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall66" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall66" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 560, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall67" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall67" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 592, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall68" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall68" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 624, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall69" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall69" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 656, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall70" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall70" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 688, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall71" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall71" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 720, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall72" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall72" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 752, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall73" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall73" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 784, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall74" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall74" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 816, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall75" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall75" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 848, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall76" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall76" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 880, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall77" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall77" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 944, -192 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall55" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall55" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 176, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall94" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall94" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 208, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall95" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall95" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 240, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall97" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall97" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 272, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall96" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall96" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 304, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall99" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall99" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 368, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall98" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall98" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 400, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall101" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall101" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 432, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall100" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall100" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 464, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall103" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall103" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 560, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall102" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall102" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 592, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall105" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall105" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 656, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall104" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall104" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 688, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall107" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall107" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 752, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall106" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall106" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 784, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall109" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall109" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 848, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall108" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall108" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 880, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall110" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall110" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 944, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Wall111" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall111" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 496, -352 )
 texture = ExtResource( 6 )
 
-[node name="Facade_Window2" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window2" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 48, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window3" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window3" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 144, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window9" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window9" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 144, -192 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window12" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window12" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 272, -192 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window13" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window13" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 528, -192 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window14" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window14" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 912, -192 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window11" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window11" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 144, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window23" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window23" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 336, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window28" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window28" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 528, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window24" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window24" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 624, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window25" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window25" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 720, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window26" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window26" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 816, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window27" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window27" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 912, -352 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window4" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window4" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 240, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window5" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window5" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 336, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window6" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window6" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 528, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Wall27" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall27" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 176, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall26" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall26" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 112, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall54" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall54" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 176, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall53" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall53" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 112, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall78" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall78" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 240, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall81" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall81" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 208, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall79" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall79" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 304, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall80" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall80" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 368, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall82" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall82" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 432, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall83" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall83" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 464, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall84" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall84" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 496, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall85" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall85" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 560, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall86" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall86" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 592, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall87" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall87" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 624, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall88" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall88" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 688, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall89" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall89" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 752, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall90" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall90" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 816, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall91" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall91" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 848, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall92" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall92" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 880, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall93" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall93" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 944, -272 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall28" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall28" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 208, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall29" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall29" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 240, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall30" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall30" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 272, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall33" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall33" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 304, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall32" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall32" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 336, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall31" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall31" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 368, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall36" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall36" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 400, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall35" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall35" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 432, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall34" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall34" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 464, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall39" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall39" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 496, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall38" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall38" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 528, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall37" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall37" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 560, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall44" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall44" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 592, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall43" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall43" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 624, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall42" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall42" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 656, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall41" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall41" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 688, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall40" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall40" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 720, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall49" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall49" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 752, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall48" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall48" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 784, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall47" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall47" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 816, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall46" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall46" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 848, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall50" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall50" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 880, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Wall52" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Wall52" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 944, -112 )
 texture = ExtResource( 3 )
 
-[node name="Facade_Window7" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window7" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 912, -32 )
 texture = ExtResource( 5 )
 
-[node name="Facade_Window" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 144, -112 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window10" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window10" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 144, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window15" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window15" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 272, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window16" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window16" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 336, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window17" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window17" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 400, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window18" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window18" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 528, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window19" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window19" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 656, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window20" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window20" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 720, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window21" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window21" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 784, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window22" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window22" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 912, -272 )
 texture = ExtResource( 1 )
 
-[node name="Facade_Window8" type="Sprite" parent="Facade_Sprite(NoFade)/Walls"]
+[node name="Facade_Window8" type="Sprite" parent="Facade_Walls/Walls"]
 position = Vector2( 912, -112 )
 texture = ExtResource( 1 )
 
-[node name="Pillars" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Pillars" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -32 )
 
-[node name="Facade_Pillar2" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar2" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar23" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar23" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 480, -160 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar25" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar25" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 480, -240 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar27" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar27" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 480, -320 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar29" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar29" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 480, -80 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar31" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar31" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar7" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar7" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar6" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar6" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 192, -80 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar5" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar5" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 192, -160 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar22" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar22" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 576, -160 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar24" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar24" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 576, -240 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar26" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar26" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 576, -320 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar28" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar28" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 576, -80 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar30" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar30" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar16" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar16" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 192, -240 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar17" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar17" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 192, -320 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar13" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar13" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar12" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar12" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 864, -80 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar11" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar11" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 864, -160 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar19" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar19" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 864, -240 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar21" type="Sprite" parent="Facade_Sprite(NoFade)/Pillars"]
+[node name="Facade_Pillar21" type="Sprite" parent="Facade_Walls/Pillars"]
 position = Vector2( 864, -320 )
 texture = ExtResource( 2 )
 
-[node name="Edges1" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Edges1" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -72 )
 
-[node name="Facade_Divider" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 16, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider49" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider49" type="Sprite" parent="Facade_Walls/Edges1"]
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider2" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider2" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 32, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider3" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider3" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 48, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider4" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider4" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 64, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider5" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider5" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 80, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider6" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider6" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider7" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider7" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 112, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider8" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider8" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 128, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider9" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider9" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 144, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider10" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider10" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 160, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider11" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider11" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 176, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider12" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider12" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider24" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider24" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 208, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider23" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider23" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 224, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider22" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider22" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 240, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider21" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider21" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 256, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider20" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider20" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 272, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider19" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider19" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 288, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider18" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider18" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 304, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider17" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider17" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider16" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider16" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 336, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider15" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider15" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 352, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider14" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider14" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 368, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider13" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider13" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 384, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider36" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider36" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 400, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider35" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider35" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 416, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider34" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider34" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 432, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider33" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider33" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 448, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider32" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider32" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 464, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider31" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider31" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider30" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider30" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 496, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider29" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider29" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 512, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider28" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider28" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 528, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider27" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider27" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 544, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider26" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider26" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 560, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider25" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider25" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider48" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider48" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 592, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider47" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider47" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 608, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider46" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider46" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 624, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider45" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider45" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 640, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider44" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider44" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 656, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider43" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider43" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 672, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider42" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider42" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 688, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider41" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider41" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 704, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider40" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider40" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 720, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider39" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider39" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 736, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider38" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider38" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 752, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider37" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider37" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 768, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider60" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider60" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider59" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider59" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 800, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider58" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider58" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 816, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider57" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider57" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 832, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider56" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider56" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 848, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider55" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider55" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider54" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider54" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 880, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider53" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider53" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 896, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider52" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider52" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 912, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider51" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider51" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 928, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider50" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider50" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 944, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider61" type="Sprite" parent="Facade_Sprite(NoFade)/Edges1"]
+[node name="Facade_Divider61" type="Sprite" parent="Facade_Walls/Edges1"]
 position = Vector2( 960, 0 )
 texture = ExtResource( 7 )
 
-[node name="Edges2" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Edges2" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -152 )
 
-[node name="Facade_Divider7" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider7" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 112, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider49" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider49" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider8" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider8" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 128, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider9" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider9" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 144, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider10" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider10" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 160, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider11" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider11" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 176, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider12" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider12" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider24" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider24" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 208, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider23" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider23" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 224, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider22" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider22" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 240, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider21" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider21" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 256, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider20" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider20" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 272, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider19" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider19" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 288, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider18" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider18" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 304, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider17" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider17" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider16" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider16" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 336, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider15" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider15" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 352, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider14" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider14" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 368, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider13" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider13" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 384, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider36" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider36" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 400, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider35" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider35" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 416, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider34" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider34" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 432, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider33" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider33" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 448, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider32" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider32" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 464, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider31" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider31" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider30" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider30" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 496, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider29" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider29" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 512, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider28" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider28" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 528, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider27" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider27" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 544, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider26" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider26" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 560, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider25" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider25" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider48" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider48" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 592, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider47" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider47" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 608, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider46" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider46" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 624, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider45" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider45" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 640, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider44" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider44" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 656, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider43" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider43" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 672, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider42" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider42" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 688, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider41" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider41" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 704, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider40" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider40" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 720, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider39" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider39" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 736, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider38" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider38" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 752, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider37" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider37" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 768, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider60" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider60" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider59" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider59" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 800, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider58" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider58" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 816, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider57" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider57" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 832, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider56" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider56" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 848, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider55" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider55" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider54" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider54" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 880, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider53" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider53" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 896, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider52" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider52" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 912, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider51" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider51" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 928, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider50" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider50" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 944, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider61" type="Sprite" parent="Facade_Sprite(NoFade)/Edges2"]
+[node name="Facade_Divider61" type="Sprite" parent="Facade_Walls/Edges2"]
 position = Vector2( 960, 0 )
 texture = ExtResource( 7 )
 
-[node name="Edges3" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Edges3" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -232 )
 
-[node name="Facade_Divider7" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider7" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 112, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider49" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider49" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider8" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider8" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 128, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider9" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider9" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 144, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider10" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider10" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 160, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider11" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider11" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 176, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider12" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider12" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider24" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider24" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 208, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider23" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider23" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 224, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider22" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider22" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 240, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider21" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider21" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 256, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider20" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider20" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 272, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider19" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider19" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 288, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider18" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider18" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 304, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider17" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider17" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider16" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider16" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 336, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider15" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider15" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 352, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider14" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider14" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 368, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider13" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider13" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 384, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider36" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider36" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 400, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider35" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider35" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 416, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider34" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider34" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 432, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider33" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider33" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 448, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider32" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider32" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 464, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider31" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider31" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider30" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider30" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 496, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider29" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider29" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 512, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider28" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider28" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 528, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider27" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider27" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 544, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider26" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider26" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 560, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider25" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider25" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider48" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider48" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 592, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider47" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider47" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 608, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider46" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider46" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 624, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider45" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider45" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 640, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider44" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider44" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 656, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider43" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider43" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 672, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider42" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider42" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 688, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider41" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider41" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 704, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider40" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider40" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 720, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider39" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider39" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 736, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider38" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider38" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 752, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider37" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider37" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 768, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider60" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider60" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider59" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider59" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 800, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider58" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider58" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 816, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider57" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider57" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 832, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider56" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider56" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 848, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider55" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider55" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider54" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider54" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 880, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider53" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider53" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 896, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider52" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider52" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 912, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider51" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider51" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 928, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider50" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider50" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 944, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider61" type="Sprite" parent="Facade_Sprite(NoFade)/Edges3"]
+[node name="Facade_Divider61" type="Sprite" parent="Facade_Walls/Edges3"]
 position = Vector2( 960, 0 )
 texture = ExtResource( 7 )
 
-[node name="Edges4" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Edges4" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -312 )
 
-[node name="Facade_Divider7" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider7" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 112, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider49" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider49" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider8" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider8" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 128, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider9" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider9" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 144, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider10" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider10" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 160, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider11" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider11" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 176, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider12" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider12" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider24" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider24" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 208, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider23" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider23" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 224, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider22" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider22" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 240, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider21" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider21" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 256, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider20" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider20" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 272, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider19" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider19" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 288, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider18" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider18" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 304, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider17" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider17" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider16" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider16" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 336, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider15" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider15" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 352, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider14" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider14" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 368, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider13" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider13" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 384, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider36" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider36" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 400, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider35" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider35" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 416, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider34" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider34" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 432, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider33" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider33" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 448, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider32" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider32" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 464, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider31" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider31" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider30" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider30" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 496, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider29" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider29" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 512, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider28" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider28" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 528, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider27" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider27" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 544, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider26" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider26" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 560, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider25" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider25" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider48" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider48" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 592, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider47" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider47" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 608, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider46" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider46" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 624, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider45" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider45" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 640, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider44" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider44" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 656, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider43" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider43" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 672, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider42" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider42" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 688, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider41" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider41" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 704, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider40" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider40" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 720, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider39" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider39" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 736, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider38" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider38" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 752, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider37" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider37" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 768, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider60" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider60" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider59" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider59" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 800, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider58" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider58" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 816, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider57" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider57" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 832, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider56" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider56" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 848, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider55" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider55" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider54" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider54" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 880, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider53" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider53" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 896, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider52" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider52" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 912, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider51" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider51" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 928, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider50" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider50" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 944, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider61" type="Sprite" parent="Facade_Sprite(NoFade)/Edges4"]
+[node name="Facade_Divider61" type="Sprite" parent="Facade_Walls/Edges4"]
 position = Vector2( 960, 0 )
 texture = ExtResource( 7 )
 
-[node name="Edges5" type="Node2D" parent="Facade_Sprite(NoFade)"]
+[node name="Edges5" type="Node2D" parent="Facade_Walls"]
 position = Vector2( 0, -392 )
 
-[node name="Facade_Divider7" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider7" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 112, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider49" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider49" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 96, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider8" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider8" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 128, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider9" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider9" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 144, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider10" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider10" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 160, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider11" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider11" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 176, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider12" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider12" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 192, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider24" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider24" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 208, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider23" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider23" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 224, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider22" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider22" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 240, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider21" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider21" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 256, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider20" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider20" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 272, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider19" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider19" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 288, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider18" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider18" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 304, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider17" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider17" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 320, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider16" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider16" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 336, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider15" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider15" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 352, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider14" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider14" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 368, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider13" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider13" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 384, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider36" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider36" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 400, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider35" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider35" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 416, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider34" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider34" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 432, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider33" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider33" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 448, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider32" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider32" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 464, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider31" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider31" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 480, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider30" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider30" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 496, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider29" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider29" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 512, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider28" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider28" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 528, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider27" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider27" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 544, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider26" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider26" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 560, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider25" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider25" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 576, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider48" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider48" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 592, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider47" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider47" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 608, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider46" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider46" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 624, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider45" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider45" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 640, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider44" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider44" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 656, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider43" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider43" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 672, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider42" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider42" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 688, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider41" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider41" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 704, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider40" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider40" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 720, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider39" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider39" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 736, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider38" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider38" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 752, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider37" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider37" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 768, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider60" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider60" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 784, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider59" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider59" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 800, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider58" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider58" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 816, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider57" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider57" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 832, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider56" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider56" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 848, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider55" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider55" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 864, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider54" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider54" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 880, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider53" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider53" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 896, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider52" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider52" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 912, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider51" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider51" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 928, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider50" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider50" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 944, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Divider61" type="Sprite" parent="Facade_Sprite(NoFade)/Edges5"]
+[node name="Facade_Divider61" type="Sprite" parent="Facade_Walls/Edges5"]
 position = Vector2( 960, 0 )
 texture = ExtResource( 7 )
 
-[node name="Facade_Sprite(Fade)" type="Node2D" parent="."]
+[node name="Facade_Border" type="Node2D" parent="."]
 z_index = 2
 
-[node name="Facade_Pillar3" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar3" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -112 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar4" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar4" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -192 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar14" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar14" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -272 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar15" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar15" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -352 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar10" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar10" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -32 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar9" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar9" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -112 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar8" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar8" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -192 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar18" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar18" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -272 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar20" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar20" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -352 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Pillar" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Pillar" type="Sprite" parent="Facade_Border"]
 position = Vector2( 0, -32 )
 texture = ExtResource( 2 )
 
-[node name="Facade_Edge" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge" type="Sprite" parent="Facade_Border"]
 position = Vector2( 0, -72 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge2" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge2" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -72 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge3" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge3" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -152 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge4" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge4" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -152 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge5" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge5" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -232 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge6" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge6" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -232 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge7" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge7" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -312 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge8" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge8" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -312 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge9" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge9" type="Sprite" parent="Facade_Border"]
 position = Vector2( 96, -392 )
 texture = ExtResource( 4 )
 
-[node name="Facade_Edge10" type="Sprite" parent="Facade_Sprite(Fade)"]
+[node name="Facade_Edge10" type="Sprite" parent="Facade_Border"]
 position = Vector2( 960, -392 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )

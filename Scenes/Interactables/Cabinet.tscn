@@ -24,4 +24,4 @@ shape = SubResource( 1 )
 
 [node name="Arrow" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -22.0977 )
-frame = 5
+frame = 2

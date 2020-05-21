@@ -99,14 +99,14 @@ func on_animation_finished():
 	match animator.animation:
 		"Eating":
 			busy = false
-			print("Done eating")
+#			print("Done eating")
 		"Drinking":
 			busy = false
 			make_idle()
-			print("Done drinking")
+#			print("Done drinking")
 		"RaiseHands":
 			busy = false
-			print("Done raising")
+#			print("Done raising")
 		_:
 			return
 
