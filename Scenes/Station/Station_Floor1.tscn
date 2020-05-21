@@ -443,5 +443,9 @@ position = Vector2( 968, -40 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collision/StaticBody2D2"]
 shape = SubResource( 2 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision/StaticBody2D2"]
+position = Vector2( -976, 8 )
+shape = SubResource( 2 )
+
 [node name="PoliceOfficer_Female1" parent="." instance=ExtResource( 32 )]
 position = Vector2( 240, -24 )
